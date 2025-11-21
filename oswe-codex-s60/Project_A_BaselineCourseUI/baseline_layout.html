@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+  <meta charset=\"UTF-8\" />
+  <title>Baseline Course UI</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    .hero { background: #eef3ff; padding: 60px 40px; font-size: 1.4rem; }
+    .info-card { padding: 20px; border-bottom: 1px solid #ddd; background: #fafafa; }
+    .section { padding: 20px 40px; border-bottom: 1px solid #eee; }
+    .reviews { padding: 20px 40px; background: #f5f5f5; }
+    .attachment { margin: 10px 0; }
+    .attachment a { color: #0645ad; cursor: pointer; }
+    /* Blocking preview modal */
+    .modal { display: none; position: fixed; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.75); z-index:9999; }
+    .modal-content { position: relative; margin: 5% auto; padding: 20px; background: #fff; width: 80%; height: 80%; overflow: auto; }
+    .modal-close { position: absolute; top: 10px; right: 20px; cursor: pointer; font-size: 20px; }
+  </style>
+</head>
+<body>
+  
+
+  
+    
+      
+    
+    
+      <div class="hero" id="hero">
+        <h1>Become a Data Scientist</h1>
+        <p>Learn Python, ML, and deployment.</p>
+      </div>
+    
+  
+    
+      
+    
+    
+      <div class="info-card" id="info_card">
+        <div><strong>Price:</strong> $199</div>
+        <div><strong>Level:</strong> Intermediate</div>
+        <div><strong>Tags:</strong> Python, ML</div>
+        
+          <button class="cta">Enroll Now</button>
+        
+      </div>
+    
+  
+    
+      
+    
+    
+      <div class="section" id="syllabus">
+        <h2>Syllabus</h2>
+        
+        
+          
+            
+    
+    
+      <div class="section" id="mod1">
+        <h2>Intro</h2>
+        <p>Overview</p>
+        
+      </div>
+    
+  
+          
+            
+    
+    
+      <div class="section" id="mod2">
+        <h2>Python</h2>
+        <p>Basics</p>
+        
+      </div>
+    
+  
+          
+        
+      </div>
+    
+  
+    
+      
+    
+    
+      <div class="reviews" id="reviews">
+        <h2>Reviews</h2>
+        <p>Rating: 4.6</p>
+      </div>
+    
+  
+    
+  
+
+  <div class="modal" id="attachmentModal">
+    <div class="modal-content">
+      <span class="modal-close" id="modalClose">&times;</span>
+      <iframe id="modalFrame" src="" style="width:100%; height:100%; border:none;"></iframe>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const modal = document.getElementById('attachmentModal');
+      const modalFrame = document.getElementById('modalFrame');
+      const modalClose = document.getElementById('modalClose');
+      document.querySelectorAll('.attachment-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const url = this.getAttribute('data-url');
+          modalFrame.src = url || 'about:blank';
+          modal.style.display = 'block';
+        });
+      });
+      modalClose.addEventListener('click', function() {
+        modal.style.display = 'none';
+        modalFrame.src = '';
+      });
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.style.display = 'none';
+          modalFrame.src = '';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
