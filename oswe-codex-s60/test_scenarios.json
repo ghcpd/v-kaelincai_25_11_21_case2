@@ -1,0 +1,228 @@
+[
+  {
+    "id": "normal_flow",
+    "description": "Standard course with hero, info card, syllabus, reviews. Tests hierarchy restructuring and collapsibles.",
+    "tags": ["normal", "hierarchy", "collapsible"],
+    "input_layout": {
+      "id": "course_page",
+      "type": "page",
+      "title": "Mastering Data Science",
+      "meta": {"hero_height": 620},
+      "children": [
+        {
+          "id": "hero",
+          "type": "hero",
+          "title": "Become a Data Scientist",
+          "content": "Learn Python, ML, and deployment.",
+          "meta": {"height": 620}
+        },
+        {
+          "id": "info_card",
+          "type": "info_card",
+          "content": {"price": "$199", "level": "Intermediate", "tags": ["Python", "ML"], "cta": "Enroll Now"},
+          "meta": {"position": "below_hero"}
+        },
+        {
+          "id": "syllabus",
+          "type": "section",
+          "title": "Syllabus",
+          "meta": {"collapsible": true, "default_expanded": true},
+          "children": [
+            {"id": "mod1", "type": "section", "title": "Intro", "content": "Overview", "meta": {"height": 300}},
+            {"id": "mod2", "type": "section", "title": "Python", "content": "Basics", "meta": {"height": 400}}
+          ]
+        },
+        {
+          "id": "reviews",
+          "type": "reviews",
+          "title": "Reviews",
+          "meta": {"rating": 4.6, "height": 500}
+        }
+      ]
+    },
+    "expected": {
+      "status": "ok",
+      "ui_warnings": [],
+      "edge_case_flags": [],
+      "errors": []
+    },
+    "thresholds": {
+      "hierarchy_clarity": {"baseline_max": 0.55, "enhanced_min": 0.7},
+      "scroll_length": {"baseline_min": 1400, "enhanced_max": 1100},
+      "misop_risk": {"baseline_min": 0.4, "enhanced_max": 0.25}
+    },
+    "expected_behaviors": {
+      "baseline": {"blocking_preview": true, "collapsibles": false, "requires_confirmation": false, "pinned_info_card": false, "safe_fallback": false},
+      "enhanced": {"blocking_preview": false, "collapsibles": true, "requires_confirmation": true, "pinned_info_card": true, "safe_fallback": true}
+    }
+  },
+  {
+    "id": "mis_operation_flow",
+    "description": "Critical actions without confirmations and potential public/internal confusion.",
+    "tags": ["mis-operation", "safety"],
+    "input_layout": {
+      "id": "course_page",
+      "type": "page",
+      "title": "Secure DevOps",
+      "meta": {},
+      "children": [
+        {"id": "hero", "type": "hero", "title": "Secure your pipelines", "meta": {"height": 580}},
+        {"id": "info_card", "type": "info_card", "content": {"price": "$299", "cta": "Pay & Enroll"}},
+        {"id": "author_notes", "type": "notes", "title": "Internal Notes", "content": "Draft syllabus", "meta": {"public": false, "height": 200}},
+        {"id": "syllabus", "type": "section", "title": "Syllabus", "meta": {}, "children": []},
+        {"id": "dangerous_action", "type": "action", "title": "Publish Course", "meta": {"dangerous_action": true}}
+      ]
+    },
+    "expected": {
+      "status": "ok",
+      "ui_warnings": ["dangerous_action_without_confirmation"],
+      "edge_case_flags": ["public_internal_confusion"],
+      "errors": []
+    },
+    "thresholds": {
+      "misop_risk": {"baseline_min": 0.6, "enhanced_max": 0.3},
+      "hierarchy_clarity": {"baseline_max": 0.5, "enhanced_min": 0.65}
+    },
+    "expected_behaviors": {
+      "baseline": {"blocking_preview": true, "collapsibles": false, "requires_confirmation": false, "pinned_info_card": false, "safe_fallback": false},
+      "enhanced": {"blocking_preview": false, "collapsibles": true, "requires_confirmation": true, "pinned_info_card": true, "safe_fallback": true}
+    }
+  },
+  {
+    "id": "long_scroll_flow",
+    "description": "Many modules causing long scroll; validates collapsible reduction and anchored navigation.",
+    "tags": ["long-scroll", "performance"],
+    "input_layout": {
+      "id": "course_page",
+      "type": "page",
+      "title": "Full-Stack Mega Bootcamp",
+      "children": [
+        {"id": "hero", "type": "hero", "title": "Become Full-Stack", "meta": {"height": 640}},
+        {"id": "info_card", "type": "info_card", "content": {"price": "$499", "cta": "Enroll"}},
+        {
+          "id": "syllabus",
+          "type": "section",
+          "title": "Syllabus",
+          "children": [
+            {"id": "mod1", "type": "section", "title": "HTML", "meta": {"height": 400}},
+            {"id": "mod2", "type": "section", "title": "CSS", "meta": {"height": 450}},
+            {"id": "mod3", "type": "section", "title": "JavaScript", "meta": {"height": 500}},
+            {"id": "mod4", "type": "section", "title": "Node", "meta": {"height": 500}},
+            {"id": "mod5", "type": "section", "title": "Databases", "meta": {"height": 500}},
+            {"id": "mod6", "type": "section", "title": "DevOps", "meta": {"height": 500}},
+            {"id": "mod7", "type": "section", "title": "Cloud", "meta": {"height": 500}},
+            {"id": "mod8", "type": "section", "title": "Capstone", "meta": {"height": 500}}
+          ]
+        },
+        {"id": "reviews", "type": "reviews", "meta": {"height": 600}}
+      ]
+    },
+    "expected": {
+      "status": "ok",
+      "ui_warnings": [],
+      "edge_case_flags": [],
+      "errors": []
+    },
+    "thresholds": {
+      "scroll_length": {"baseline_min": 4000, "enhanced_max": 2000},
+      "hierarchy_clarity": {"baseline_max": 0.45, "enhanced_min": 0.65}
+    },
+    "expected_behaviors": {
+      "baseline": {"blocking_preview": true, "collapsibles": false, "requires_confirmation": false, "pinned_info_card": false, "safe_fallback": false},
+      "enhanced": {"blocking_preview": false, "collapsibles": true, "requires_confirmation": true, "pinned_info_card": true, "safe_fallback": true}
+    }
+  },
+  {
+    "id": "complex_nesting_flow",
+    "description": "Deeply nested sections with mixed types and ambiguous fields; tests grouping, collapsibility, and safe handling.",
+    "tags": ["complex", "nesting", "edge"],
+    "input_layout": {
+      "id": "course_page",
+      "type": "page",
+      "title": "Advanced AI Systems",
+      "children": [
+        {"id": "hero", "type": "hero", "title": "AI at Scale", "meta": {"height": 600}},
+        {"id": "info_card", "type": "info_card", "content": {"price": "$599", "level": "Advanced", "cta": "Enroll"}},
+        {
+          "id": "syllabus",
+          "type": "section",
+          "title": "Syllabus",
+          "children": [
+            {
+              "id": "mod1",
+              "type": "section",
+              "title": "Foundations",
+              "children": [
+                {"id": "lesson1", "type": "section", "title": "Math Review", "meta": {"height": 200}},
+                {"id": "lesson2", "type": "attachment", "title": "PDF Notes", "content": {"url": "notes.pdf", "preview_type": "fullscreen"}}
+              ]
+            },
+            {
+              "id": "mod2",
+              "type": "section",
+              "title": "Deep Learning",
+              "children": [
+                {"id": "lesson3", "type": "section", "title": "CNNs", "meta": {"height": 300}},
+                {"id": "lesson4", "type": "section", "title": "Transformers", "meta": {"height": 350}},
+                {
+                  "id": "nested_misc",
+                  "type": "section",
+                  "title": null,
+                  "content": "",
+                  "children": [
+                    {"id": "weird_link", "type": "attachment", "title": "External Ref", "content": {"url": "http://evil.com", "preview_type": "inline"}}
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {"id": "reviews", "type": "reviews", "meta": {"height": 500}}
+      ]
+    },
+    "expected": {
+      "status": "warning",
+      "ui_warnings": ["unsafe_url_sanitized"],
+      "edge_case_flags": ["ambiguous_section_title"],
+      "errors": []
+    },
+    "thresholds": {
+      "edge_coverage": {"enhanced_min": 0.3},
+      "hierarchy_clarity": {"baseline_max": 0.5, "enhanced_min": 0.7}
+    },
+    "expected_behaviors": {
+      "baseline": {"blocking_preview": true, "collapsibles": false, "requires_confirmation": false, "pinned_info_card": false, "safe_fallback": false},
+      "enhanced": {"blocking_preview": false, "collapsibles": true, "requires_confirmation": true, "pinned_info_card": true, "safe_fallback": true}
+    }
+  },
+  {
+    "id": "malformed_input",
+    "description": "Malformed layout with invalid types, missing fields, and bad structures; tests safe degradation.",
+    "tags": ["malformed", "error-handling"],
+    "input_layout": {
+      "id": "course_page",
+      "type": "page",
+      "title": "Broken Course",
+      "children": [
+        {"id": "hero", "type": "hero", "title": "", "meta": {"height": "tall"}},
+        {"id": "unknown_block", "type": "foo", "content": "???"},
+        {"type": "section", "content": "Missing ID"},
+        "string_instead_of_object",
+        {"id": "syllabus", "type": "section", "children": [{"id": "mod", "type": 123}]}
+      ]
+    },
+    "expected": {
+      "status": "warning",
+      "ui_warnings": ["malformed_nodes_detected"],
+      "edge_case_flags": ["auto_repaired"],
+      "errors": []
+    },
+    "thresholds": {
+      "hierarchy_clarity": {"baseline_max": 0.4, "enhanced_min": 0.55}
+    },
+    "expected_behaviors": {
+      "baseline": {"blocking_preview": true, "collapsibles": false, "requires_confirmation": false, "pinned_info_card": false, "safe_fallback": false},
+      "enhanced": {"blocking_preview": false, "collapsibles": true, "requires_confirmation": false, "pinned_info_card": true, "safe_fallback": true}
+    }
+  }
+]

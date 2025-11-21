@@ -1,0 +1,44 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# IDE/editor configs
+.vscode/
+.idea/
+*.code-workspace
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.mypy_cache/
+.pytest_cache/
+.dmypy.json
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Generated artifacts
+logs/
+results/
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Coverage/testing outputs
+.coverage
+coverage.xml
+htmlcov/
+
+# Local env/config
+.env
+.env.*
+*.local
+
+# Misc runtime
+nohup.out
