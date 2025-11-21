@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>Enhanced Course Layout - mis_operation_flow</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f4f6fb; margin: 0; }
+    header.hero { min-height: 560px; background: linear-gradient(120deg,#0f172a,#2563eb); color:#fff; padding:48px; }
+    .grid { display:flex; gap:32px; padding:32px; }
+    .cards { flex: 3; display:grid; grid-template-columns: repeat(auto-fill,minmax(320px,1fr)); gap:24px; }
+    .card { background:#fff; border-radius:16px; padding:20px; box-shadow:0 10px 30px rgba(15,23,42,.1); }
+    .card.collapsed pre { display:none; }
+    .info-card { flex:1; position: sticky; top:24px; align-self:flex-start; background:#fff; border-radius:16px; padding:24px; box-shadow:0 12px 40px rgba(15,23,42,.15); }
+    .cta-primary { display:block; background:#2563eb; color:#fff; text-align:center; padding:14px; border-radius:12px; margin-top:16px; text-decoration:none; font-weight:600; }
+    nav { position:sticky; top:0; background:#0f172a; color:#fff; padding:12px 24px; display:flex; gap:16px; }
+    nav a { color:#fff; opacity:.85; text-decoration:none; font-size:14px; }
+    .attachment-panel { position:fixed; right:0; top:0; width:320px; height:100%; background:#fff; box-shadow:-20px 0 30px rgba(15,23,42,.15); padding:24px; overflow-y:auto; }
+    .mobile-cta { position:fixed; bottom:0; left:0; right:0; background:#2563eb; color:#fff; text-align:center; padding:16px; font-weight:600; }
+  </style>
+</head>
+<body>
+  <nav><a href='#section-hero_details'>Value Props</a><a href='#section-syllabus_stream'>Mega Syllabus</a><a href='#section-related_courses'>Related Courses</a></nav>
+  <header class='hero'>
+    <h1>Course Detail Prototype</h1>
+    <p>Pinned info card keeps key actions visible while content collapses intelligently.</p>
+  </header>
+  <div class='grid'>
+    <div class='cards'>
+      <article id='section-hero_details' class='card'><h3>Value Props</h3><pre>{
+  &quot;id&quot;: &quot;hero_details&quot;,
+  &quot;type&quot;: &quot;sub-hero&quot;,
+  &quot;title&quot;: &quot;Value Props&quot;,
+  &quot;content&quot;: [
+    &quot;Live critiques&quot;,
+    &quot;Capstone&quot;
+  ],
+  &quot;collapsed&quot;: false,
+  &quot;card_variant&quot;: &quot;card&quot;,
+  &quot;visibility&quot;: &quot;public&quot;
+}</pre></article>
+<article id='section-syllabus_stream' class='card collapsed'><h3>Mega Syllabus</h3><pre>{
+  &quot;id&quot;: &quot;syllabus_stream&quot;,
+  &quot;type&quot;: &quot;syllabus&quot;,
+  &quot;title&quot;: &quot;Mega Syllabus&quot;,
+  &quot;content&quot;: [],
+  &quot;collapsed&quot;: true,
+  &quot;card_variant&quot;: &quot;card&quot;,
+  &quot;visibility&quot;: &quot;public&quot;
+}</pre></article>
+<article id='section-related_courses' class='card collapsed'><h3>Related Courses</h3><pre>{
+  &quot;id&quot;: &quot;related_courses&quot;,
+  &quot;type&quot;: &quot;related&quot;,
+  &quot;title&quot;: &quot;Related Courses&quot;,
+  &quot;content&quot;: [],
+  &quot;collapsed&quot;: true,
+  &quot;card_variant&quot;: &quot;card&quot;,
+  &quot;visibility&quot;: &quot;public&quot;
+}</pre></article>
+    </div>
+    <aside class='info-card'>
+      <h2>Course Info</h2>
+      <p class='price'>Price: 249</p>
+      <p>Tags: Live, Cohort</p>
+      <p>Status: open</p>
+      <p>Guarantee: 30-day refund</p>
+      <a class='cta-primary' href='#enroll'>Join Cohort</a>
+    </aside>
+  </div>
+  <section class='attachment-panel'>
+    <h3>Attachment Preview (non-blocking)</h3>
+    <ul><li>Capstone Brief</li></ul>
+  </section>
+  <div class='mobile-cta'>Tap to enroll &bull; confirmation required</div>
+</body>
+</html>

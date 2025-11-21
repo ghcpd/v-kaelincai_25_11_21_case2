@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>Enhanced Course Layout - normal_flow</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f4f6fb; margin: 0; }
+    header.hero { min-height: 720px; background: linear-gradient(120deg,#0f172a,#2563eb); color:#fff; padding:48px; }
+    .grid { display:flex; gap:32px; padding:32px; }
+    .cards { flex: 3; display:grid; grid-template-columns: repeat(auto-fill,minmax(320px,1fr)); gap:24px; }
+    .card { background:#fff; border-radius:16px; padding:20px; box-shadow:0 10px 30px rgba(15,23,42,.1); }
+    .card.collapsed pre { display:none; }
+    .info-card { flex:1; position: sticky; top:24px; align-self:flex-start; background:#fff; border-radius:16px; padding:24px; box-shadow:0 12px 40px rgba(15,23,42,.15); }
+    .cta-primary { display:block; background:#2563eb; color:#fff; text-align:center; padding:14px; border-radius:12px; margin-top:16px; text-decoration:none; font-weight:600; }
+    nav { position:sticky; top:0; background:#0f172a; color:#fff; padding:12px 24px; display:flex; gap:16px; }
+    nav a { color:#fff; opacity:.85; text-decoration:none; font-size:14px; }
+    .attachment-panel { position:fixed; right:0; top:0; width:320px; height:100%; background:#fff; box-shadow:-20px 0 30px rgba(15,23,42,.15); padding:24px; overflow-y:auto; }
+    .mobile-cta { position:fixed; bottom:0; left:0; right:0; background:#2563eb; color:#fff; text-align:center; padding:16px; font-weight:600; }
+  </style>
+</head>
+<body>
+  <nav><a href='#section-course_overview'>Course Overview</a><a href='#section-syllabus_full'>Full Syllabus</a><a href='#section-instructor_bio'>Instructor Bio</a><a href='#section-reviews_stream'>Reviews Stream</a><a href='#section-attachments_panel'>Attachments Panel</a></nav>
+  <header class='hero'>
+    <h1>Course Detail Prototype</h1>
+    <p>Pinned info card keeps key actions visible while content collapses intelligently.</p>
+  </header>
+  <div class='grid'>
+    <div class='cards'>
+      <article id='section-course_overview' class='card'><h3>Course Overview</h3><pre>{
+  &quot;id&quot;: &quot;course_overview&quot;,
+  &quot;type&quot;: &quot;overview&quot;,
+  &quot;title&quot;: &quot;Course Overview&quot;,
+  &quot;content&quot;: [
+    &quot;20+ modules&quot;,
+    &quot;Project guidance&quot;
+  ],
+  &quot;collapsed&quot;: false,
+  &quot;card_variant&quot;: &quot;card&quot;,
+  &quot;visibility&quot;: &quot;public&quot;
+}</pre></article>
+<article id='section-syllabus_full' class='card collapsed'><h3>Full Syllabus</h3><pre>{
+  &quot;id&quot;: &quot;syllabus_full&quot;,
+  &quot;type&quot;: &quot;syllabus&quot;,
+  &quot;title&quot;: &quot;Full Syllabus&quot;,
+  &quot;content&quot;: [],
+  &quot;collapsed&quot;: true,
+  &quot;card_variant&quot;: &quot;card&quot;,
+  &quot;visibility&quot;: &quot;public&quot;
+}</pre></article>
+<article id='section-instructor_bio' class='card'><h3>Instructor Bio</h3><pre>{
+  &quot;id&quot;: &quot;instructor_bio&quot;,
+  &quot;type&quot;: &quot;instructor&quot;,
+  &quot;title&quot;: &quot;Instructor Bio&quot;,
+  &quot;content&quot;: [],
+  &quot;collapsed&quot;: false,
+  &quot;card_variant&quot;: &quot;card&quot;,
+  &quot;visibility&quot;: &quot;public&quot;
+}</pre></article>
+<article id='section-reviews_stream' class='card collapsed'><h3>Reviews Stream</h3><pre>{
+  &quot;id&quot;: &quot;reviews_stream&quot;,
+  &quot;type&quot;: &quot;reviews&quot;,
+  &quot;title&quot;: &quot;Reviews Stream&quot;,
+  &quot;content&quot;: [],
+  &quot;collapsed&quot;: true,
+  &quot;card_variant&quot;: &quot;card&quot;,
+  &quot;visibility&quot;: &quot;public&quot;
+}</pre></article>
+<article id='section-attachments_panel' class='card'><h3>Attachments Panel</h3><pre>{
+  &quot;id&quot;: &quot;attachments_panel&quot;,
+  &quot;type&quot;: &quot;attachments&quot;,
+  &quot;title&quot;: &quot;Attachments Panel&quot;,
+  &quot;content&quot;: [],
+  &quot;collapsed&quot;: false,
+  &quot;card_variant&quot;: &quot;card&quot;,
+  &quot;visibility&quot;: &quot;public&quot;
+}</pre></article>
+    </div>
+    <aside class='info-card'>
+      <h2>Course Info</h2>
+      <p class='price'>Price: 189</p>
+      <p>Tags: Popular, Self-paced</p>
+      <p>Status: open</p>
+      <p>Guarantee: 30-day refund</p>
+      <a class='cta-primary' href='#enroll'>Enroll Now</a>
+    </aside>
+  </div>
+  <section class='attachment-panel'>
+    <h3>Attachment Preview (non-blocking)</h3>
+    <ul><li>Course Outline</li></ul>
+  </section>
+  <div class='mobile-cta'>Tap to enroll &bull; confirmation required</div>
+</body>
+</html>

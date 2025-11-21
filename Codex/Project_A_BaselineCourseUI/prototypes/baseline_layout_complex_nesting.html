@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>Baseline Course Layout - complex_nesting</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
+    .hero hero-xl { height: 980px; background: #222; color: #fff; display: flex; align-items: center; justify-content: center; text-transform: uppercase; }
+    section.block { padding: 24px; border-bottom: 1px solid #ddd; background: #fff; }
+    .cta { position: relative; margin: 24px; padding: 16px; background: #ffdede; text-align: center; }
+    pre { white-space: pre-wrap; background: #f0f0f0; padding: 12px; overflow-x: auto; }
+  </style>
+</head>
+<body>
+  <div class='hero hero-xl'>Oversized Hero</div>
+  <div class='cta'>CTA lives in footer only: Apply</div>
+  <section class='block block-overview'><h2>cluster_one_overview</h2><pre>{
+  &quot;id&quot;: &quot;cluster_one_overview&quot;,
+  &quot;type&quot;: &quot;overview&quot;,
+  &quot;content&quot;: [
+    &quot;System thinking&quot;
+  ]
+}</pre></section>
+<section class='block block-notes'><h2>cluster_one_internal</h2><pre>{
+  &quot;id&quot;: &quot;cluster_one_internal&quot;,
+  &quot;type&quot;: &quot;notes&quot;,
+  &quot;visibility&quot;: &quot;internal&quot;,
+  &quot;content&quot;: [
+    &quot;Draft copy&quot;
+  ]
+}</pre></section>
+<section class='block block-syllabus'><h2>cluster_two_syllabus</h2><pre>{
+  &quot;id&quot;: &quot;cluster_two_syllabus&quot;,
+  &quot;type&quot;: &quot;syllabus&quot;,
+  &quot;entries&quot;: [
+    {
+      &quot;week&quot;: 1,
+      &quot;items&quot;: [
+        &quot;Intro&quot;,
+        &quot;Map&quot;
+      ]
+    },
+    {
+      &quot;week&quot;: 2,
+      &quot;items&quot;: [
+        &quot;Architecture&quot;,
+        &quot;Evaluation&quot;
+      ]
+    }
+  ]
+}</pre></section>
+<section class='block block-reviews'><h2>cluster_two_reviews</h2><pre>{
+  &quot;id&quot;: &quot;cluster_two_reviews&quot;,
+  &quot;type&quot;: &quot;reviews&quot;,
+  &quot;items&quot;: []
+}</pre></section>
+  <div class='attachments'>Attachments open as overlay (blocking)</div>
+</body>
+</html>

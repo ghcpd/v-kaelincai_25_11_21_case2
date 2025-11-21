@@ -1,0 +1,149 @@
+[
+  {
+    "id": "normal_flow",
+    "description": "Standard overloaded layout with oversized hero and sequential sections.",
+    "input_layout": {
+      "hero": {"size": "xl", "media_type": "video", "content_density": 0.92},
+      "info_card": {"price": 189, "tags": ["Popular", "Self-paced"], "cta_text": "Enroll Now"},
+      "sections": [
+        {"id": "course_overview", "type": "overview", "title": "Course Overview", "content": ["20+ modules", "Project guidance"]},
+        {"id": "syllabus_full", "type": "syllabus", "title": "Full Syllabus", "entries": [
+          {"week": 1, "label": "Foundations", "items": ["Syntax", "Tooling"]},
+          {"week": 2, "label": "Systems", "items": ["Deployment", "Monitoring"]}
+        ]},
+        {"id": "instructor_bio", "type": "instructor", "columns": ["Dr. Rivera", "12 yrs exp", "NLP"], "full_width": true},
+        {"id": "reviews_stream", "type": "reviews", "items": [
+          {"student": "Mina", "rating": 4.7, "comment": "Great depth"},
+          {"student": "Ken", "rating": 4.3, "comment": "Challenging"}
+        ]},
+        {"id": "attachments_panel", "type": "attachments", "items": [
+          {"name": "Week1Slides.pdf", "size": "12MB", "preview_type": "pdf"}
+        ]}
+      ],
+      "attachments": [
+        {"name": "Course Outline", "type": "doc", "size": "1.2MB"}
+      ],
+      "author_notes": {"visibility": "mixed", "text": "Draft release - do not advertise discounts."},
+      "interactions": {"cta_locations": ["footer"], "enrollment_confirmation": false},
+      "layout_tree": {"root": ["hero", ["overview", ["syllabus", ["reviews"]]]]},
+      "theme": "light"
+    },
+    "expectations": {
+      "runtime_behavior": "Baseline shows scroll-heavy flow; enhanced version collapses syllabus and pins CTA.",
+      "output_fields": ["status", "metrics", "ui_warnings", "edge_case_flags", "errors"],
+      "required_metrics": ["hierarchy_clarity", "scroll_length", "mis_operation_risk", "edge_case_coverage"]
+    }
+  },
+  {
+    "id": "mis_operation_flow",
+    "description": "Frequent accidental enrollments due to tiny spacing and missing confirmation.",
+    "input_layout": {
+      "hero": {"size": "lg", "media_type": "image", "content_density": 0.88},
+      "info_card": {"price": 249, "tags": ["Live", "Cohort"], "cta_text": "Join Cohort"},
+      "sections": [
+        {"id": "hero_details", "type": "sub-hero", "title": "Value Props", "content": ["Live critiques", "Capstone"]},
+        {"id": "syllabus_stream", "type": "syllabus", "title": "Mega Syllabus", "entries": [
+          {"module": "M1", "items": ["Lesson 1", "Lesson 2", "Lesson 3", "Lesson 4"]},
+          {"module": "M2", "items": ["Lesson 5", "Lesson 6"]}
+        ]},
+        {"id": "related_courses", "type": "related", "items": ["UI Crash Course", "Systems Thinking"]}
+      ],
+      "attachments": [
+        {"name": "Capstone Brief", "type": "pdf", "size": "5MB"}
+      ],
+      "author_notes": {"visibility": "public", "text": "Scholarship info"},
+      "interactions": {"cta_locations": ["header", "footer"], "enrollment_confirmation": false},
+      "layout_tree": {"root": ["hero", {"column": ["syllabus", "related"]}]},
+      "theme": "dark"
+    },
+    "expectations": {
+      "runtime_behavior": "Improved version must inject confirmation prompts and bottom CTA lock.",
+      "output_fields": ["status", "metrics", "ui_warnings", "edge_case_flags", "errors"],
+      "required_metrics": ["mis_operation_risk", "hierarchy_clarity", "interaction_steps"]
+    }
+  },
+  {
+    "id": "long_scroll_flow",
+    "description": "14 sections linear stack creating >7k px scroll equivalent.",
+    "input_layout": {
+      "hero": {"size": "xxl", "media_type": "carousel", "content_density": 0.97},
+      "info_card": {"price": 129, "tags": ["Beginner"], "cta_text": "Start Today"},
+      "sections": [
+        {"id": "overview", "type": "overview", "content": ["For new analysts"]},
+        {"id": "benefits", "type": "metrics", "content": ["200+ lessons", "5 mentors"]},
+        {"id": "syllabus_abbrev", "type": "syllabus", "entries": [
+          {"block": "Phase 1", "items": ["SQL", "Python", "Dashboards"]},
+          {"block": "Phase 2", "items": ["ML", "Ops"]}
+        ]},
+        {"id": "instructor_column", "type": "instructor", "columns": ["Ava", "JP"], "full_width": true},
+        {"id": "reviews", "type": "reviews", "items": [{"student": "Lee", "rating": 4.9}]},
+        {"id": "faqs", "type": "faq", "items": ["Refund", "Support"]},
+        {"id": "related_one", "type": "related", "items": ["Bootcamp"]}
+      ],
+      "attachments": [
+        {"name": "Sample Project", "type": "video", "size": "250MB"}
+      ],
+      "author_notes": {"visibility": "internal", "text": "Pending compliance review"},
+      "interactions": {"cta_locations": ["footer"], "enrollment_confirmation": false},
+      "layout_tree": ["hero", ["overview", ["benefits", ["syllabus", ["reviews", "faqs"]]]]],
+      "theme": "light"
+    },
+    "expectations": {
+      "runtime_behavior": "Enhanced mode should reduce scroll via collapsibles + anchored nav.",
+      "output_fields": ["status", "metrics", "ui_warnings", "edge_case_flags", "errors"],
+      "required_metrics": ["scroll_length", "collapsible_sections", "hierarchy_clarity"]
+    }
+  },
+  {
+    "id": "complex_nesting",
+    "description": "Deeply nested mixed-type layout with ambiguous section definitions.",
+    "input_layout": {
+      "hero": {"size": "xl", "media_type": "video", "content_density": 0.85},
+      "info_card": {"price": 349, "tags": ["Advanced", "Certification"], "cta_text": "Apply"},
+      "sections": [
+        {
+          "id": "cluster_one",
+          "type": "group",
+          "children": [
+            {"id": "cluster_one_overview", "type": "overview", "content": ["System thinking"]},
+            {"id": "cluster_one_internal", "type": "notes", "visibility": "internal", "content": ["Draft copy"]}
+          ]
+        },
+        {
+          "id": "cluster_two",
+          "type": "group",
+          "children": [
+            {"id": "cluster_two_syllabus", "type": "syllabus", "entries": [
+              {"week": 1, "items": ["Intro", "Map"]},
+              {"week": 2, "items": ["Architecture", "Evaluation"]}
+            ]},
+            {"id": "cluster_two_reviews", "type": "reviews", "items": []}
+          ]
+        }
+      ],
+      "attachments": [
+        {"name": "System Map", "type": "image", "size": "8MB"},
+        {"name": "Toolkit", "type": "zip", "size": "40MB"}
+      ],
+      "author_notes": {"visibility": "mixed", "text": "Sensitive roadmap"},
+      "interactions": {"cta_locations": ["sidebar"], "enrollment_confirmation": true},
+      "layout_tree": {"root": ["hero", {"grid": [["cluster_one", "cluster_two"]]}]},
+      "theme": "neutral"
+    },
+    "expectations": {
+      "runtime_behavior": "Enhanced path must correctly group cards and hide internal notes from public view.",
+      "output_fields": ["status", "metrics", "ui_warnings", "edge_case_flags", "errors"],
+      "required_metrics": ["edge_case_coverage", "hierarchy_clarity", "safety_score"]
+    }
+  },
+  {
+    "id": "malformed_input",
+    "description": "Broken layout payload mixing strings, missing arrays, and unsafe HTML.",
+    "input_layout": "<script>alert('bad')</script>",
+    "expectations": {
+      "runtime_behavior": "Systems must sanitize payload and fallback to safe defaults without crashing.",
+      "output_fields": ["status", "metrics", "ui_warnings", "edge_case_flags", "errors"],
+      "required_metrics": ["edge_case_coverage", "errors"]
+    }
+  }
+]

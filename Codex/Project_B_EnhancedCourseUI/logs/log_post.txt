@@ -1,0 +1,5 @@
+[normal_flow] status=ok hierarchy=83.5 scroll=1340 collapsible=2
+[mis_operation_flow] status=ok hierarchy=80.5 scroll=1200 collapsible=2
+[long_scroll_flow] status=ok hierarchy=90.5 scroll=1580 collapsible=4
+[complex_nesting] status=ok hierarchy=82.0 scroll=1200 collapsible=2
+[malformed_input] status=degraded hierarchy=77.0 scroll=1200 collapsible=1

@@ -1,0 +1,114 @@
+{
+  "scenarios": [
+    {
+      "id": "normal_flow",
+      "status": "ok",
+      "metrics": {
+        "hierarchy_clarity": 83.5,
+        "scroll_length": 1340,
+        "mis_operation_risk": 26,
+        "edge_case_coverage": 100,
+        "collapsed_block_count": 2,
+        "interaction_steps": 3,
+        "safety_score": 90,
+        "collapsible_sections": 2
+      },
+      "ui_warnings": [],
+      "edge_case_flags": [],
+      "errors": [],
+      "prototype_path": "/mnt/e/acv_data/bug_bash/2025_11_21/case_2/codex/v-kaelincai_25_11_21_case2/Project_B_EnhancedCourseUI/prototypes/enhanced_layout_normal_flow.html"
+    },
+    {
+      "id": "mis_operation_flow",
+      "status": "ok",
+      "metrics": {
+        "hierarchy_clarity": 80.5,
+        "scroll_length": 1200,
+        "mis_operation_risk": 26,
+        "edge_case_coverage": 95,
+        "collapsed_block_count": 2,
+        "interaction_steps": 3,
+        "safety_score": 80,
+        "collapsible_sections": 2
+      },
+      "ui_warnings": [],
+      "edge_case_flags": [
+        "no_internal_notes"
+      ],
+      "errors": [],
+      "prototype_path": "/mnt/e/acv_data/bug_bash/2025_11_21/case_2/codex/v-kaelincai_25_11_21_case2/Project_B_EnhancedCourseUI/prototypes/enhanced_layout_mis_operation_flow.html"
+    },
+    {
+      "id": "long_scroll_flow",
+      "status": "ok",
+      "metrics": {
+        "hierarchy_clarity": 90.5,
+        "scroll_length": 1580,
+        "mis_operation_risk": 24,
+        "edge_case_coverage": 100,
+        "collapsed_block_count": 4,
+        "interaction_steps": 2,
+        "safety_score": 90,
+        "collapsible_sections": 4
+      },
+      "ui_warnings": [],
+      "edge_case_flags": [],
+      "errors": [],
+      "prototype_path": "/mnt/e/acv_data/bug_bash/2025_11_21/case_2/codex/v-kaelincai_25_11_21_case2/Project_B_EnhancedCourseUI/prototypes/enhanced_layout_long_scroll_flow.html"
+    },
+    {
+      "id": "complex_nesting",
+      "status": "ok",
+      "metrics": {
+        "hierarchy_clarity": 82.0,
+        "scroll_length": 1200,
+        "mis_operation_risk": 26,
+        "edge_case_coverage": 100,
+        "collapsed_block_count": 2,
+        "interaction_steps": 3,
+        "safety_score": 90,
+        "collapsible_sections": 2
+      },
+      "ui_warnings": [],
+      "edge_case_flags": [],
+      "errors": [],
+      "prototype_path": "/mnt/e/acv_data/bug_bash/2025_11_21/case_2/codex/v-kaelincai_25_11_21_case2/Project_B_EnhancedCourseUI/prototypes/enhanced_layout_complex_nesting.html"
+    },
+    {
+      "id": "malformed_input",
+      "status": "degraded",
+      "metrics": {
+        "hierarchy_clarity": 77.0,
+        "scroll_length": 1200,
+        "mis_operation_risk": 27,
+        "edge_case_coverage": 90,
+        "collapsed_block_count": 1,
+        "interaction_steps": 4,
+        "safety_score": 80,
+        "collapsible_sections": 1
+      },
+      "ui_warnings": [
+        "malformed_payload_safe_mode",
+        "no_sections_found"
+      ],
+      "edge_case_flags": [
+        "safe_mode_enabled",
+        "missing_attachment_preview",
+        "no_internal_notes"
+      ],
+      "errors": [
+        "malformed_payload_safe_mode",
+        "no_sections_found"
+      ],
+      "prototype_path": "/mnt/e/acv_data/bug_bash/2025_11_21/case_2/codex/v-kaelincai_25_11_21_case2/Project_B_EnhancedCourseUI/prototypes/enhanced_layout_malformed_input.html"
+    }
+  ],
+  "summary": {
+    "total_scenarios": 5,
+    "passed": 5,
+    "failed": 0,
+    "average_hierarchy_clarity": 82.7,
+    "average_scroll_length": 1304,
+    "runtime_seconds": 0.043
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "scenarios": [
+    {
+      "id": "complex_nesting",
+      "baseline_status": "ok",
+      "enhanced_status": "ok",
+      "hierarchy_delta": 51.0,
+      "scroll_delta": 660,
+      "mis_operation_delta": 43,
+      "edge_case_delta": 25.0,
+      "baseline_proto": "/mnt/e/acv_data/bug_bash/2025_11_21/case_2/codex/v-kaelincai_25_11_21_case2/Project_A_BaselineCourseUI/prototypes/baseline_layout_complex_nesting.html",
+      "enhanced_proto": "/mnt/e/acv_data/bug_bash/2025_11_21/case_2/codex/v-kaelincai_25_11_21_case2/Project_B_EnhancedCourseUI/prototypes/enhanced_layout_complex_nesting.html"
+    },
+    {
+      "id": "long_scroll_flow",
+      "baseline_status": "ok",
+      "enhanced_status": "ok",
+      "hierarchy_delta": 65.5,
+      "scroll_delta": 1160,
+      "mis_operation_delta": 48,
+      "edge_case_delta": 14.29,
+      "baseline_proto": "/mnt/e/acv_data/bug_bash/2025_11_21/case_2/codex/v-kaelincai_25_11_21_case2/Project_A_BaselineCourseUI/prototypes/baseline_layout_long_scroll_flow.html",
+      "enhanced_proto": "/mnt/e/acv_data/bug_bash/2025_11_21/case_2/codex/v-kaelincai_25_11_21_case2/Project_B_EnhancedCourseUI/prototypes/enhanced_layout_long_scroll_flow.html"
+    },
+    {
+      "id": "malformed_input",
+      "baseline_status": "ok",
+      "enhanced_status": "degraded",
+      "hierarchy_delta": 36.0,
+      "scroll_delta": -220,
+      "mis_operation_delta": 38,
+      "edge_case_delta": 90.0,
+      "baseline_proto": "/mnt/e/acv_data/bug_bash/2025_11_21/case_2/codex/v-kaelincai_25_11_21_case2/Project_A_BaselineCourseUI/prototypes/baseline_layout_malformed_input.html",
+      "enhanced_proto": "/mnt/e/acv_data/bug_bash/2025_11_21/case_2/codex/v-kaelincai_25_11_21_case2/Project_B_EnhancedCourseUI/prototypes/enhanced_layout_malformed_input.html"
+    },
+    {
+      "id": "mis_operation_flow",
+      "baseline_status": "ok",
+      "enhanced_status": "ok",
+      "hierarchy_delta": 47.1,
+      "scroll_delta": 320,
+      "mis_operation_delta": 42,
+      "edge_case_delta": 28.33,
+      "baseline_proto": "/mnt/e/acv_data/bug_bash/2025_11_21/case_2/codex/v-kaelincai_25_11_21_case2/Project_A_BaselineCourseUI/prototypes/baseline_layout_mis_operation_flow.html",
+      "enhanced_proto": "/mnt/e/acv_data/bug_bash/2025_11_21/case_2/codex/v-kaelincai_25_11_21_case2/Project_B_EnhancedCourseUI/prototypes/enhanced_layout_mis_operation_flow.html"
+    },
+    {
+      "id": "normal_flow",
+      "baseline_status": "ok",
+      "enhanced_status": "ok",
+      "hierarchy_delta": 56.9,
+      "scroll_delta": 740,
+      "mis_operation_delta": 44,
+      "edge_case_delta": 0.0,
+      "baseline_proto": "/mnt/e/acv_data/bug_bash/2025_11_21/case_2/codex/v-kaelincai_25_11_21_case2/Project_A_BaselineCourseUI/prototypes/baseline_layout_normal_flow.html",
+      "enhanced_proto": "/mnt/e/acv_data/bug_bash/2025_11_21/case_2/codex/v-kaelincai_25_11_21_case2/Project_B_EnhancedCourseUI/prototypes/enhanced_layout_normal_flow.html"
+    }
+  ],
+  "baseline_summary": {
+    "total_scenarios": 5,
+    "passed": 5,
+    "failed": 0,
+    "average_hierarchy_clarity": 31.4,
+    "average_scroll_length": 1836,
+    "runtime_seconds": 0.021
+  },
+  "enhanced_summary": {
+    "total_scenarios": 5,
+    "passed": 5,
+    "failed": 0,
+    "average_hierarchy_clarity": 82.7,
+    "average_scroll_length": 1304,
+    "runtime_seconds": 0.043
+  }
+}

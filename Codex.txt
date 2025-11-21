@@ -1,0 +1,207 @@
+You are a software engineer responsible for implementing and testing the capabilities of AI models on the UI/UX improvement subtype within the Feature & improvement category.
+Your task is to deliver a Python-based implementation that performs UI/UX restructuring, hierarchy correction, section grouping, interaction optimization, attachment-preview enhancement, and mis-operation prevention for an Online Course Platform “Course Detail Page” scenario.
+The implementation must simulate layout transformation and interaction-behavior improvements (before → after), handling edge cases, malformed structures, mixed-type fields, ambiguous section definitions, and deeply nested layout trees while ensuring correctness and robustness.
+You must also generate automated test cases and a fully reproducible environment to verify your implementation. Produce two separate project folders representing the baseline and improved versions.
+Ensure all necessary setup files (e.g., requirements.txt, setup.sh), test code, and automated run scripts (e.g., run_tests.sh) are included so every test runs via a single command. Each project must additionally output at least one HTML prototype file so reviewers can visually inspect the baseline and enhanced UI states.
+
+Description
+This experiment evaluates AI models’ ability to implement and optimize UI/UX improvements for an overloaded Online Course “Detail Page.”
+Current pain points:
+• Oversized hero pushes key information below the fold
+• Long linear sections lack modular grouping
+• No persistent CTA in view; users scroll to the footer to enroll
+• Instructor, syllabus, and reviews span full width, reducing scannability
+• Mobile view remains dense and slow
+• Attachment or syllabus previews open fullscreen, blocking context
+The improved version (Project B) must deliver:
+• Information hierarchy restructuring with a pinned “Course Info Card” (price, tags, CTA)
+• Default-collapsed syllabus/reviews/related courses
+• Card-based visual hierarchy with background segmentation and spacing
+• Clear separation between public descriptions and internal author notes
+• Non-blocking attachment previews (side panel or inline hover)
+• Confirmation prompts for enrollment/payment actions
+• Reduced interaction friction (mobile bottom CTA, fewer scrolls, anchored navigation)
+• Safe degradation for missing modules, invalid types, malformed layout trees, and unsafe HTML
+• Automatic generation of HTML prototypes per project to validate the UI visually
+Key evaluation criteria:
+• Correctness of the transformation
+• Improvement in information hierarchy and cognitive load reduction
+• Handling malformed inputs, hidden vulnerabilities, and mixed types
+• Accuracy of grouping/collapsing nested structures
+• Automated test coverage for transformations and edge cases
+• Reproducible environment with one-command execution
+• Quantitative metrics: hierarchy clarity, scroll-length reduction, edge-case coverage ratio
+
+Shape
+
+Requirements for the AI Model Output
+
+Shape
+
+Test Scenario & Description
+
+Detail scenarios validating the UI/UX improvements: overloaded → modular flow, hierarchy dominance, collapsible logic, non-blocking preview, public vs. internal differentiation, error handling, deep nesting, mis-operation prevention, and HTML prototype verification.
+
+Test Data Generation
+
+Provide ≥5 structured cases in test_scenarios.json: normal flow, mis-operation flow, long-scroll flow, complex nesting, malformed input. Include expected runtime behavior and output fields (status, metrics, ui_warnings, edge_case_flags, errors).
+
+Reproducible Environment
+
+Each project includes requirements.txt, setup.sh (virtualenv + deps), optional Dockerfile, README describing setup/test instructions.
+
+Test Code
+
+Load scenarios, invoke baseline/enhanced implementations, validate hierarchy/collapse/preview/mis-operation/fallback behavior, compute metrics (total, pass/fail, edge coverage, hierarchy clarity score, mis-operation risk reduction), save results_pre.json/results_post.json and log_pre.txt/log_post.txt.
+
+Execution Scripts
+
+Each run_tests.sh prepares the environment, runs tests, collects logs, writes results/, and generates the required HTML prototype.
+
+Root run_all.sh runs Project A then Project B, aggregates /results, and produces compare_report.md covering hierarchy, collapsibility, attachment preview, mis-operation prevention, and edge-case handling.
+
+Expected Output
+
+For every scenario: results_pre/post, detailed failure logs, improvement analysis (hierarchy restructuring, scroll reduction, malformed handling, mis-operation prevention) with references to the generated HTML prototypes.
+
+compare_report.md must contain pass/fail matrix, hierarchy clarity delta, collapsibility comparison, mis-operation risk reduction, edge-case resilience.
+
+Documentation / Explanation
+
+README per project explaining how to run tests, interpret outputs, describe each scenario’s usability/safety impact, validated principles, common pitfalls (missing info card, incorrect collapses, blocking previews, unsafe fallback, public/internal confusion), and limitations (simulated rendering, heuristic metrics, simplified mis-operation scoring).
+
+Shape
+
+Deliverables
+
+Shape
+
+Project A – Baseline Course UI (folder: Project_A_BaselineCourseUI)
+• Simplistic transformation (no hierarchy restructuring, no collapsibles, blocking preview, no mis-operation protection)
+• src/, tests/, logs/, results/
+• requirements.txt, setup.sh, run_tests.sh
+• Auto-generated baseline_layout.html (or equivalent) showcasing the unoptimized UI
+
+Project B – Enhanced Course UI (folder: Project_B_EnhancedCourseUI)
+• Full UI/UX improvement implementation (pinned info card, collapsible syllabus/reviews, side/inline preview, public vs. internal separation, confirmation prompts, safe fallback)
+• src/, tests/, logs/, results/
+• requirements.txt, setup.sh, run_tests.sh
+• Auto-generated enhanced_layout.html (or equivalent) showing the improved UI
+
+Shared Artifacts
+• test_scenarios.json
+• run_all.sh
+• compare_report.md
+• Aggregated /results directory (including references to both HTML prototypes)
+
+Shape
+
+Goal
+Deliver two fully reproducible project folders demonstrating and validating UI/UX improvement for the Online Course Detail Page overload scenario, including automated tests, scenario evaluations, logs, results, HTML prototypes, and a final comparison report covering:
+• Information hierarchy gains (shortened hero + pinned info card)
+• Scroll-length reduction via collapsible sections and persistent CTA
+• Clear interaction-area separation (public vs. author content)
+• Safer, contextual attachment previews
+• Robust handling of malformed or unsafe layouts
+• Reduced mis-operation risk for enrollment/publication actions
+
+
+Implementation
+
+Shared evaluation inputs (normal, mis-operation, long-scroll, complex-nesting, malformed) live in test_scenarios.json (line 1), giving each runner consistent expectations for metrics, warnings, and error-handling targets.
+The baseline transformer keeps the intentionally overloaded experience while normalizing malformed payloads, computing heuristic metrics, and emitting blocking attachment previews plus HTML prototypes (Project_A_BaselineCourseUI/src/layout_transformer.py (line 28)).
+The enhanced transformer restructures layouts into cards with a pinned info card, collapsible syllabus/reviews, non-blocking previews, confirmation prompts, and safe fallbacks for nested or malformed layouts (Project_B_EnhancedCourseUI/src/layout_transformer.py (line 27)).
+Scenario harnesses execute validations, capture logs/results, and enforce project-specific expectations such as “no collapsibles” for baseline vs. “persistent CTA + confirmations” for enhanced (Project_A_BaselineCourseUI/tests/run_scenarios.py (line 16), Project_B_EnhancedCourseUI/tests/run_scenarios.py (line 16)).
+Every run produces visual prototypes so reviewers can inspect before/after states (e.g., Project_A_BaselineCourseUI/prototypes/baseline_layout_normal_flow.html (line 1), Project_B_EnhancedCourseUI/prototypes/enhanced_layout_normal_flow.html (line 1)), fulfilling the HTML requirement.
+Running run_all.sh (line 1) executes both projects (if bash is available) and then aggregates comparisons via compare_results.py (line 96), writing the summarized diff plus prototype references into compare_report.md (line 1) and machine-readable deltas into results/aggregate_results.json (line 1).
+Testing
+
+python Project_A_BaselineCourseUI/tests/run_scenarios.py
+python Project_B_EnhancedCourseUI/tests/run_scenarios.py
+python compare_results.py
+All tests passed, producing results_pre.json, results_post.json, logs, HTML prototypes, and the consolidated report.
+
+Next Steps
+
+Run ./run_all.sh (or its individual steps) in your environment to reproduce the full pipeline end-to-end.
+Open any of the generated prototypes (for example Project_B_EnhancedCourseUI/prototypes/enhanced_layout_normal_flow.html) to visually verify the hierarchy and interaction changes described in the report.
+8 files changed
++90
+-18
+
+
+run_tests.sh
++15
+-2
+
+setup.sh
++15
+-2
+
+layout_transformer.py
++9
+-3
+
+run_scenarios.py
++7
+-2
+
+run_tests.sh
++15
+-2
+
+setup.sh
++15
+-2
+
+layout_transformer.py
++8
+-3
+
+run_scenarios.py
++6
+-2
+
+Run the entire project using the provided environment setup and execution scripts.
+Verify that the system launches successfully without errors.
+Execute all automated test cases and ensure they all pass.
+Capture the outputs, logs, and any error traces if failures occur.
+Confirm that the project meets the expected functionality and behaves consistently under all provided test scenarios.
+Summarize the runtime results and explicitly state whether all test cases passed.
+
+
+Run Summary
+
+Executed the full automation via bash run_all.sh, which sequentially ran both project test suites, regenerated HTML prototypes, and produced the comparison artifacts without errors.
+Baseline metrics/logs were regenerated in Project_A_BaselineCourseUI/results/results_pre.json (line 1) and Project_A_BaselineCourseUI/logs/log_pre.txt (line 1), covering all five scenarios with status ok.
+Enhanced metrics/logs were regenerated in Project_B_EnhancedCourseUI/results/results_post.json (line 1) and Project_B_EnhancedCourseUI/logs/log_post.txt (line 1), again showing every scenario completing (malformed payload flagged as degraded yet still passing validation).
+The consolidated report and machine-readable deltas were updated successfully (compare_report.md (line 1), results/aggregate_results.json (line 1)), confirming hierarchy gains, scroll reduction, safer attachment previews, and prototype references.
+Test Results
+
+Baseline harness: 5 scenarios run, 5 passed (summary embedded in Project_A_BaselineCourseUI/results/results_pre.json (line 1)).
+Enhanced harness: 5 scenarios run, 5 passed (summary embedded in Project_B_EnhancedCourseUI/results/results_post.json (line 1)).
+No failures occurred; no additional error traces were emitted after the script adjustments.
+Status
+All automated test cases passed across both baseline and enhanced implementations. The system now runs end-to-end via the provided scripts, generates the requested outputs (logs, JSON summaries, HTML prototypes, comparison report), and behaves consistently across every supplied scenario.
+
+4 files changed
++48
+-12
+
+
+run_tests.sh
++12
+-3
+
+setup.sh
++12
+-3
+
+run_tests.sh
++12
+-3
+
+setup.sh
++12
+-3
+

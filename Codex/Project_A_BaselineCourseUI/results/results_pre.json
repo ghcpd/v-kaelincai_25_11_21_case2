@@ -1,0 +1,125 @@
+{
+  "scenarios": [
+    {
+      "id": "normal_flow",
+      "status": "ok",
+      "metrics": {
+        "hierarchy_clarity": 26.6,
+        "scroll_length": 2080,
+        "mis_operation_risk": 70,
+        "edge_case_coverage": 100.0,
+        "collapsed_block_count": 0,
+        "collapsible_sections": 0,
+        "interaction_steps": 5,
+        "safety_score": 35
+      },
+      "ui_warnings": [],
+      "edge_case_flags": [
+        "internal_notes_exposed",
+        "missing_enrollment_confirmation",
+        "attachment_blocks_view"
+      ],
+      "errors": [],
+      "prototype_path": "/mnt/e/acv_data/bug_bash/2025_11_21/case_2/codex/v-kaelincai_25_11_21_case2/Project_A_BaselineCourseUI/prototypes/baseline_layout_normal_flow.html"
+    },
+    {
+      "id": "mis_operation_flow",
+      "status": "ok",
+      "metrics": {
+        "hierarchy_clarity": 33.4,
+        "scroll_length": 1520,
+        "mis_operation_risk": 68,
+        "edge_case_coverage": 66.67,
+        "collapsed_block_count": 0,
+        "collapsible_sections": 0,
+        "interaction_steps": 4,
+        "safety_score": 35
+      },
+      "ui_warnings": [],
+      "edge_case_flags": [
+        "missing_enrollment_confirmation",
+        "attachment_blocks_view"
+      ],
+      "errors": [],
+      "prototype_path": "/mnt/e/acv_data/bug_bash/2025_11_21/case_2/codex/v-kaelincai_25_11_21_case2/Project_A_BaselineCourseUI/prototypes/baseline_layout_mis_operation_flow.html"
+    },
+    {
+      "id": "long_scroll_flow",
+      "status": "ok",
+      "metrics": {
+        "hierarchy_clarity": 25,
+        "scroll_length": 2740,
+        "mis_operation_risk": 72,
+        "edge_case_coverage": 85.71,
+        "collapsed_block_count": 0,
+        "collapsible_sections": 0,
+        "interaction_steps": 6,
+        "safety_score": 35
+      },
+      "ui_warnings": [],
+      "edge_case_flags": [
+        "internal_notes_exposed",
+        "missing_enrollment_confirmation",
+        "attachment_blocks_view"
+      ],
+      "errors": [],
+      "prototype_path": "/mnt/e/acv_data/bug_bash/2025_11_21/case_2/codex/v-kaelincai_25_11_21_case2/Project_A_BaselineCourseUI/prototypes/baseline_layout_long_scroll_flow.html"
+    },
+    {
+      "id": "complex_nesting",
+      "status": "ok",
+      "metrics": {
+        "hierarchy_clarity": 31.0,
+        "scroll_length": 1860,
+        "mis_operation_risk": 69,
+        "edge_case_coverage": 75.0,
+        "collapsed_block_count": 0,
+        "collapsible_sections": 0,
+        "interaction_steps": 5,
+        "safety_score": 55
+      },
+      "ui_warnings": [],
+      "edge_case_flags": [
+        "internal_notes_exposed",
+        "attachment_blocks_view"
+      ],
+      "errors": [],
+      "prototype_path": "/mnt/e/acv_data/bug_bash/2025_11_21/case_2/codex/v-kaelincai_25_11_21_case2/Project_A_BaselineCourseUI/prototypes/baseline_layout_complex_nesting.html"
+    },
+    {
+      "id": "malformed_input",
+      "status": "ok",
+      "metrics": {
+        "hierarchy_clarity": 41.0,
+        "scroll_length": 980,
+        "mis_operation_risk": 65,
+        "edge_case_coverage": 0.0,
+        "collapsed_block_count": 0,
+        "collapsible_sections": 0,
+        "interaction_steps": 3,
+        "safety_score": 35
+      },
+      "ui_warnings": [
+        "malformed_payload"
+      ],
+      "edge_case_flags": [
+        "no_sections",
+        "internal_notes_exposed",
+        "missing_enrollment_confirmation",
+        "attachment_blocks_view"
+      ],
+      "errors": [
+        "malformed_payload"
+      ],
+      "prototype_path": "/mnt/e/acv_data/bug_bash/2025_11_21/case_2/codex/v-kaelincai_25_11_21_case2/Project_A_BaselineCourseUI/prototypes/baseline_layout_malformed_input.html"
+    }
+  ],
+  "summary": {
+    "total_scenarios": 5,
+    "passed": 5,
+    "failed": 0,
+    "average_hierarchy_clarity": 31.4,
+    "average_scroll_length": 1836,
+    "runtime_seconds": 0.021
+  }
+}

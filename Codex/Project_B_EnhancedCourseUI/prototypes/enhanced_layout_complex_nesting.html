@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>Enhanced Course Layout - complex_nesting</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; background: #f4f6fb; margin: 0; }
+    header.hero { min-height: 720px; background: linear-gradient(120deg,#0f172a,#2563eb); color:#fff; padding:48px; }
+    .grid { display:flex; gap:32px; padding:32px; }
+    .cards { flex: 3; display:grid; grid-template-columns: repeat(auto-fill,minmax(320px,1fr)); gap:24px; }
+    .card { background:#fff; border-radius:16px; padding:20px; box-shadow:0 10px 30px rgba(15,23,42,.1); }
+    .card.collapsed pre { display:none; }
+    .info-card { flex:1; position: sticky; top:24px; align-self:flex-start; background:#fff; border-radius:16px; padding:24px; box-shadow:0 12px 40px rgba(15,23,42,.15); }
+    .cta-primary { display:block; background:#2563eb; color:#fff; text-align:center; padding:14px; border-radius:12px; margin-top:16px; text-decoration:none; font-weight:600; }
+    nav { position:sticky; top:0; background:#0f172a; color:#fff; padding:12px 24px; display:flex; gap:16px; }
+    nav a { color:#fff; opacity:.85; text-decoration:none; font-size:14px; }
+    .attachment-panel { position:fixed; right:0; top:0; width:320px; height:100%; background:#fff; box-shadow:-20px 0 30px rgba(15,23,42,.15); padding:24px; overflow-y:auto; }
+    .mobile-cta { position:fixed; bottom:0; left:0; right:0; background:#2563eb; color:#fff; text-align:center; padding:16px; font-weight:600; }
+  </style>
+</head>
+<body>
+  <nav><a href='#section-cluster_one_overview'>Cluster One Overview</a><a href='#section-cluster_two_syllabus'>Cluster Two Syllabus</a><a href='#section-cluster_two_reviews'>Cluster Two Reviews</a></nav>
+  <header class='hero'>
+    <h1>Course Detail Prototype</h1>
+    <p>Pinned info card keeps key actions visible while content collapses intelligently.</p>
+  </header>
+  <div class='grid'>
+    <div class='cards'>
+      <article id='section-cluster_one_overview' class='card'><h3>Cluster One Overview</h3><pre>{
+  &quot;id&quot;: &quot;cluster_one_overview&quot;,
+  &quot;type&quot;: &quot;overview&quot;,
+  &quot;title&quot;: &quot;Cluster One Overview&quot;,
+  &quot;content&quot;: [
+    &quot;System thinking&quot;
+  ],
+  &quot;collapsed&quot;: false,
+  &quot;card_variant&quot;: &quot;card&quot;,
+  &quot;visibility&quot;: &quot;public&quot;
+}</pre></article>
+<article id='section-cluster_two_syllabus' class='card collapsed'><h3>Cluster Two Syllabus</h3><pre>{
+  &quot;id&quot;: &quot;cluster_two_syllabus&quot;,
+  &quot;type&quot;: &quot;syllabus&quot;,
+  &quot;title&quot;: &quot;Cluster Two Syllabus&quot;,
+  &quot;content&quot;: [],
+  &quot;collapsed&quot;: true,
+  &quot;card_variant&quot;: &quot;card&quot;,
+  &quot;visibility&quot;: &quot;public&quot;
+}</pre></article>
+<article id='section-cluster_two_reviews' class='card collapsed'><h3>Cluster Two Reviews</h3><pre>{
+  &quot;id&quot;: &quot;cluster_two_reviews&quot;,
+  &quot;type&quot;: &quot;reviews&quot;,
+  &quot;title&quot;: &quot;Cluster Two Reviews&quot;,
+  &quot;content&quot;: [],
+  &quot;collapsed&quot;: true,
+  &quot;card_variant&quot;: &quot;card&quot;,
+  &quot;visibility&quot;: &quot;public&quot;
+}</pre></article>
+    </div>
+    <aside class='info-card'>
+      <h2>Course Info</h2>
+      <p class='price'>Price: 349</p>
+      <p>Tags: Advanced, Certification</p>
+      <p>Status: open</p>
+      <p>Guarantee: 30-day refund</p>
+      <a class='cta-primary' href='#enroll'>Apply</a>
+    </aside>
+  </div>
+  <section class='attachment-panel'>
+    <h3>Attachment Preview (non-blocking)</h3>
+    <ul><li>System Map</li><li>Toolkit</li></ul>
+  </section>
+  <div class='mobile-cta'>Tap to enroll &bull; confirmation required</div>
+</body>
+</html>
