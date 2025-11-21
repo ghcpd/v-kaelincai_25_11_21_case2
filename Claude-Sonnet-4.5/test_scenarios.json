@@ -1,0 +1,323 @@
+{
+  "scenarios": [
+    {
+      "id": "scenario_01_normal_flow",
+      "name": "Normal Course Detail Page",
+      "description": "Standard course page with complete information hierarchy",
+      "input": {
+        "course_id": "CS101",
+        "title": "Introduction to Computer Science",
+        "hero": {
+          "image_url": "https://example.com/hero.jpg",
+          "height_px": 500,
+          "overlay_text": "Learn the Fundamentals"
+        },
+        "price": 99.99,
+        "currency": "USD",
+        "tags": ["Programming", "Beginner", "Computer Science"],
+        "instructor": {
+          "name": "Dr. Jane Smith",
+          "bio": "20 years of teaching experience in computer science",
+          "avatar": "https://example.com/instructor.jpg"
+        },
+        "description": "A comprehensive introduction to computer science covering algorithms, data structures, and programming fundamentals.",
+        "author_notes": "Internal: Focus on beginners. Ensure hands-on labs are tested before launch.",
+        "syllabus": [
+          {
+            "module": 1,
+            "title": "Introduction to Programming",
+            "lessons": [
+              {"id": 1, "title": "Variables and Data Types", "duration_min": 45},
+              {"id": 2, "title": "Control Structures", "duration_min": 60}
+            ]
+          },
+          {
+            "module": 2,
+            "title": "Data Structures",
+            "lessons": [
+              {"id": 3, "title": "Arrays and Lists", "duration_min": 50},
+              {"id": 4, "title": "Trees and Graphs", "duration_min": 70}
+            ]
+          }
+        ],
+        "reviews": [
+          {"user": "student1", "rating": 5, "comment": "Excellent course!"},
+          {"user": "student2", "rating": 4, "comment": "Very informative"}
+        ],
+        "related_courses": ["CS102", "CS201"],
+        "attachments": [
+          {"name": "syllabus.pdf", "size_kb": 250, "type": "pdf"},
+          {"name": "resources.zip", "size_kb": 1500, "type": "zip"}
+        ]
+      },
+      "expected_behavior": {
+        "baseline": {
+          "hero_visible": true,
+          "info_card_pinned": false,
+          "sections_collapsible": false,
+          "attachment_preview_blocking": true,
+          "public_internal_separated": false,
+          "enrollment_confirmation": false
+        },
+        "enhanced": {
+          "hero_visible": true,
+          "hero_reduced_height": true,
+          "info_card_pinned": true,
+          "sections_collapsible": true,
+          "attachment_preview_blocking": false,
+          "public_internal_separated": true,
+          "enrollment_confirmation": true,
+          "mobile_bottom_cta": true
+        }
+      },
+      "expected_metrics": {
+        "hierarchy_clarity_improvement": 0.4,
+        "scroll_reduction_percent": 30,
+        "mis_operation_risk_reduction": 0.6
+      }
+    },
+    {
+      "id": "scenario_02_mis_operation_flow",
+      "name": "Mis-operation Prevention Test",
+      "description": "Test enrollment and payment action confirmations",
+      "input": {
+        "course_id": "PREMIUM401",
+        "title": "Advanced Machine Learning",
+        "hero": {"image_url": "https://example.com/ml.jpg", "height_px": 600},
+        "price": 499.99,
+        "currency": "USD",
+        "tags": ["Advanced", "ML", "AI"],
+        "instructor": {"name": "Prof. Alan Turing", "bio": "AI Pioneer"},
+        "description": "Master advanced machine learning techniques",
+        "author_notes": "INTERNAL ONLY: This course is expensive. Add warnings.",
+        "syllabus": [{"module": 1, "title": "Deep Learning", "lessons": []}],
+        "reviews": [],
+        "related_courses": [],
+        "attachments": [],
+        "action_trigger": "immediate_enrollment"
+      },
+      "expected_behavior": {
+        "baseline": {
+          "enrollment_confirmation": false,
+          "price_warning": false,
+          "one_click_purchase": true
+        },
+        "enhanced": {
+          "enrollment_confirmation": true,
+          "price_warning": true,
+          "one_click_purchase": false,
+          "confirmation_steps": 2
+        }
+      },
+      "expected_metrics": {
+        "mis_operation_risk_reduction": 0.8,
+        "confirmation_coverage": 1.0
+      }
+    },
+    {
+      "id": "scenario_03_long_scroll_flow",
+      "name": "Overloaded Content Test",
+      "description": "Page with excessive content requiring scroll optimization",
+      "input": {
+        "course_id": "MEGA999",
+        "title": "Complete Web Development Bootcamp",
+        "hero": {"image_url": "https://example.com/web.jpg", "height_px": 700},
+        "price": 199.99,
+        "currency": "USD",
+        "tags": ["Web", "Full-Stack", "Bootcamp", "Career"],
+        "instructor": {"name": "Sarah Developer", "bio": "Full-stack engineer with 15 years experience"},
+        "description": "Everything you need to become a full-stack web developer. This comprehensive course covers HTML, CSS, JavaScript, React, Node.js, databases, deployment, and much more. With over 200 hours of content, you'll build 20+ real-world projects.",
+        "author_notes": "Internal: This is our flagship course. Ensure all modules are up to date quarterly.",
+        "syllabus": [
+          {"module": 1, "title": "HTML Basics", "lessons": [{"id": 1, "title": "Lesson 1", "duration_min": 30}, {"id": 2, "title": "Lesson 2", "duration_min": 30}]},
+          {"module": 2, "title": "CSS Fundamentals", "lessons": [{"id": 3, "title": "Lesson 3", "duration_min": 40}, {"id": 4, "title": "Lesson 4", "duration_min": 40}]},
+          {"module": 3, "title": "JavaScript Essentials", "lessons": [{"id": 5, "title": "Lesson 5", "duration_min": 50}, {"id": 6, "title": "Lesson 6", "duration_min": 50}]},
+          {"module": 4, "title": "React Framework", "lessons": [{"id": 7, "title": "Lesson 7", "duration_min": 60}, {"id": 8, "title": "Lesson 8", "duration_min": 60}]},
+          {"module": 5, "title": "Node.js Backend", "lessons": [{"id": 9, "title": "Lesson 9", "duration_min": 55}, {"id": 10, "title": "Lesson 10", "duration_min": 55}]},
+          {"module": 6, "title": "Database Design", "lessons": [{"id": 11, "title": "Lesson 11", "duration_min": 45}, {"id": 12, "title": "Lesson 12", "duration_min": 45}]},
+          {"module": 7, "title": "API Development", "lessons": [{"id": 13, "title": "Lesson 13", "duration_min": 50}, {"id": 14, "title": "Lesson 14", "duration_min": 50}]},
+          {"module": 8, "title": "Deployment", "lessons": [{"id": 15, "title": "Lesson 15", "duration_min": 40}, {"id": 16, "title": "Lesson 16", "duration_min": 40}]}
+        ],
+        "reviews": [
+          {"user": "student1", "rating": 5, "comment": "Amazing course! Learned so much."},
+          {"user": "student2", "rating": 5, "comment": "Best investment I made."},
+          {"user": "student3", "rating": 4, "comment": "Great content but very long."},
+          {"user": "student4", "rating": 5, "comment": "Changed my career!"},
+          {"user": "student5", "rating": 4, "comment": "Comprehensive and well-structured."}
+        ],
+        "related_courses": ["WEB102", "WEB201", "REACT301", "NODE401"],
+        "attachments": [
+          {"name": "course_outline.pdf", "size_kb": 500, "type": "pdf"},
+          {"name": "cheat_sheets.pdf", "size_kb": 300, "type": "pdf"},
+          {"name": "project_files.zip", "size_kb": 5000, "type": "zip"}
+        ]
+      },
+      "expected_behavior": {
+        "baseline": {
+          "all_sections_expanded": true,
+          "scroll_distance_high": true,
+          "cta_below_fold": true
+        },
+        "enhanced": {
+          "all_sections_expanded": false,
+          "default_collapsed_sections": ["syllabus", "reviews", "related_courses"],
+          "scroll_distance_reduced": true,
+          "cta_persistent": true,
+          "anchor_navigation": true
+        }
+      },
+      "expected_metrics": {
+        "scroll_reduction_percent": 50,
+        "hierarchy_clarity_improvement": 0.5,
+        "collapsible_sections_count": 3
+      }
+    },
+    {
+      "id": "scenario_04_complex_nesting",
+      "name": "Deeply Nested Layout Tree",
+      "description": "Test handling of complex nested structure with sub-modules",
+      "input": {
+        "course_id": "ADV789",
+        "title": "Enterprise Architecture Patterns",
+        "hero": {"image_url": "https://example.com/arch.jpg", "height_px": 450},
+        "price": 299.99,
+        "currency": "USD",
+        "tags": ["Architecture", "Enterprise", "Advanced"],
+        "instructor": {"name": "Dr. System Designer", "bio": "20+ years in enterprise systems"},
+        "description": "Learn enterprise-grade architectural patterns",
+        "author_notes": "Internal: Complex structure for testing purposes",
+        "syllabus": [
+          {
+            "module": 1,
+            "title": "Microservices Architecture",
+            "lessons": [
+              {
+                "id": 1,
+                "title": "Introduction to Microservices",
+                "duration_min": 40,
+                "sub_topics": [
+                  {"id": "1a", "name": "Service Decomposition", "notes": "Core concept"},
+                  {"id": "1b", "name": "API Gateway Pattern", "notes": "Essential"}
+                ]
+              },
+              {
+                "id": 2,
+                "title": "Service Communication",
+                "duration_min": 50,
+                "sub_topics": [
+                  {"id": "2a", "name": "Synchronous vs Asynchronous"},
+                  {"id": "2b", "name": "Message Queues", "examples": ["RabbitMQ", "Kafka"]}
+                ]
+              }
+            ],
+            "project": {
+              "title": "Build a Microservice",
+              "duration_hours": 10,
+              "deliverables": ["API", "Documentation", "Tests"]
+            }
+          },
+          {
+            "module": 2,
+            "title": "Event-Driven Architecture",
+            "lessons": [
+              {
+                "id": 3,
+                "title": "Event Sourcing",
+                "duration_min": 60,
+                "sub_topics": [
+                  {"id": "3a", "name": "Event Store Design"},
+                  {"id": "3b", "name": "Replay Mechanisms"}
+                ]
+              }
+            ]
+          }
+        ],
+        "reviews": [{"user": "architect1", "rating": 5, "comment": "Excellent depth"}],
+        "related_courses": ["CLOUD101"],
+        "attachments": [{"name": "patterns.pdf", "size_kb": 800, "type": "pdf"}]
+      },
+      "expected_behavior": {
+        "baseline": {
+          "nested_structure_flattened": false,
+          "sub_topics_visible": true,
+          "hierarchy_depth": 4
+        },
+        "enhanced": {
+          "nested_structure_organized": true,
+          "collapsible_sub_sections": true,
+          "hierarchy_depth": 4,
+          "visual_indentation": true
+        }
+      },
+      "expected_metrics": {
+        "nesting_depth_handled": 4,
+        "hierarchy_clarity_improvement": 0.6
+      }
+    },
+    {
+      "id": "scenario_05_malformed_input",
+      "name": "Malformed and Edge Case Handling",
+      "description": "Test robustness with missing fields, invalid types, and unsafe content",
+      "input": {
+        "course_id": "ERR404",
+        "title": "Test Course with Issues",
+        "hero": {"height_px": "invalid_height"},
+        "price": "not_a_number",
+        "tags": "should_be_array",
+        "instructor": null,
+        "description": "<script>alert('XSS')</script>Dangerous content",
+        "author_notes": null,
+        "syllabus": [
+          {
+            "module": "wrong_type",
+            "title": "Module Without Lessons"
+          },
+          {
+            "module": 2,
+            "lessons": "should_be_array"
+          }
+        ],
+        "reviews": [
+          {"user": null, "rating": "five", "comment": null},
+          {"rating": 3}
+        ],
+        "related_courses": null,
+        "attachments": [
+          {"name": null, "size_kb": -100, "type": "unknown"},
+          "invalid_attachment_format"
+        ]
+      },
+      "expected_behavior": {
+        "baseline": {
+          "crashes_on_invalid": true,
+          "xss_vulnerable": true,
+          "missing_field_errors": true
+        },
+        "enhanced": {
+          "crashes_on_invalid": false,
+          "xss_vulnerable": false,
+          "missing_field_errors": false,
+          "safe_fallbacks": true,
+          "sanitized_content": true,
+          "validation_warnings": true
+        }
+      },
+      "expected_metrics": {
+        "edge_case_coverage": 1.0,
+        "safety_score": 1.0,
+        "fallback_success_rate": 1.0
+      }
+    }
+  ],
+  "metadata": {
+    "version": "1.0.0",
+    "total_scenarios": 5,
+    "categories": {
+      "normal": 1,
+      "mis_operation": 1,
+      "long_scroll": 1,
+      "complex_nesting": 1,
+      "malformed": 1
+    }
+  }
+}

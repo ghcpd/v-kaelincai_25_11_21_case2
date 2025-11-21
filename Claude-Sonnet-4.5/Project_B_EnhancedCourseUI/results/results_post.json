@@ -1,0 +1,497 @@
+{
+  "project": "Enhanced Course UI",
+  "timestamp": "2025-11-21T15:34:43.776389",
+  "total_scenarios": 5,
+  "passed": 5,
+  "failed": 0,
+  "results": [
+    {
+      "scenario_id": "scenario_01_normal_flow",
+      "scenario_name": "Normal Course Detail Page",
+      "status": "success",
+      "passed": true,
+      "validations": [
+        {
+          "check": "info_card_pinned",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "sections_collapsible",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "attachment_preview_non_blocking",
+          "expected": "side_panel",
+          "actual": "side_panel",
+          "passed": true
+        },
+        {
+          "check": "public_internal_separated",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "enrollment_confirmation",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "mobile_optimized",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "improvements": [
+        "hero_reduced_40%",
+        "3_collapsible_sections",
+        "2_pinned_elements",
+        "scroll_reduced_30%",
+        "hierarchy_clarity_improved",
+        "mis_operation_risk_reduced_80%",
+        "robust_edge_case_handling",
+        "content_separation",
+        "confirmation_prompts"
+      ],
+      "warnings": [],
+      "errors": [],
+      "edge_case_flags": [
+        "price_invalid",
+        "tags_not_array",
+        "xss_attempt_blocked",
+        "lessons_not_array",
+        "review_rating_invalid",
+        "attachment_name_missing",
+        "attachment_not_dict"
+      ],
+      "metrics": {
+        "total_sections": 10,
+        "expanded_sections": 7,
+        "collapsible_sections": 3,
+        "pinned_elements": 2,
+        "hero_height_px": 300,
+        "hero_reduction_percent": 40.0,
+        "scroll_reduction_percent": 30.0,
+        "hierarchy_clarity_score": 0.9,
+        "mis_operation_risk": 0.2,
+        "mis_operation_risk_reduction": 0.8,
+        "edge_case_handling_score": 1.0,
+        "safety_features": {
+          "xss_sanitization": true,
+          "input_validation": true,
+          "safe_fallbacks": true,
+          "confirmation_prompts": true
+        }
+      },
+      "html_output": "E:\\acv_data\\bug_bash\\2025_11_21\\case_2\\sonnet\\v-kaelincai_25_11_21_case2\\Project_B_EnhancedCourseUI\\tests\\..\\results\\scenario_01_normal_flow_enhanced_layout.html",
+      "timestamp": "2025-11-21T15:34:43.772018"
+    },
+    {
+      "scenario_id": "scenario_02_mis_operation_flow",
+      "scenario_name": "Mis-operation Prevention Test",
+      "status": "success",
+      "passed": true,
+      "validations": [
+        {
+          "check": "info_card_pinned",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "sections_collapsible",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "attachment_preview_non_blocking",
+          "expected": "side_panel",
+          "actual": "side_panel",
+          "passed": true
+        },
+        {
+          "check": "public_internal_separated",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "enrollment_confirmation",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "mobile_optimized",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "improvements": [
+        "hero_reduced_40%",
+        "1_collapsible_sections",
+        "2_pinned_elements",
+        "scroll_reduced_14%",
+        "hierarchy_clarity_improved",
+        "mis_operation_risk_reduced_80%",
+        "robust_edge_case_handling",
+        "content_separation",
+        "confirmation_prompts"
+      ],
+      "warnings": [],
+      "errors": [],
+      "edge_case_flags": [
+        "price_invalid",
+        "tags_not_array",
+        "xss_attempt_blocked",
+        "lessons_not_array",
+        "review_rating_invalid",
+        "attachment_name_missing",
+        "attachment_not_dict"
+      ],
+      "metrics": {
+        "total_sections": 7,
+        "expanded_sections": 6,
+        "collapsible_sections": 1,
+        "pinned_elements": 2,
+        "hero_height_px": 300,
+        "hero_reduction_percent": 40.0,
+        "scroll_reduction_percent": 14.3,
+        "hierarchy_clarity_score": 0.9,
+        "mis_operation_risk": 0.2,
+        "mis_operation_risk_reduction": 0.8,
+        "edge_case_handling_score": 1.0,
+        "safety_features": {
+          "xss_sanitization": true,
+          "input_validation": true,
+          "safe_fallbacks": true,
+          "confirmation_prompts": true
+        }
+      },
+      "html_output": "E:\\acv_data\\bug_bash\\2025_11_21\\case_2\\sonnet\\v-kaelincai_25_11_21_case2\\Project_B_EnhancedCourseUI\\tests\\..\\results\\scenario_02_mis_operation_flow_enhanced_layout.html",
+      "timestamp": "2025-11-21T15:34:43.773018"
+    },
+    {
+      "scenario_id": "scenario_03_long_scroll_flow",
+      "scenario_name": "Overloaded Content Test",
+      "status": "success",
+      "passed": true,
+      "validations": [
+        {
+          "check": "info_card_pinned",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "sections_collapsible",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "attachment_preview_non_blocking",
+          "expected": "side_panel",
+          "actual": "side_panel",
+          "passed": true
+        },
+        {
+          "check": "public_internal_separated",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "enrollment_confirmation",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "mobile_optimized",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "improvements": [
+        "hero_reduced_40%",
+        "3_collapsible_sections",
+        "2_pinned_elements",
+        "scroll_reduced_30%",
+        "hierarchy_clarity_improved",
+        "mis_operation_risk_reduced_80%",
+        "robust_edge_case_handling",
+        "content_separation",
+        "confirmation_prompts"
+      ],
+      "warnings": [],
+      "errors": [],
+      "edge_case_flags": [
+        "price_invalid",
+        "tags_not_array",
+        "xss_attempt_blocked",
+        "lessons_not_array",
+        "review_rating_invalid",
+        "attachment_name_missing",
+        "attachment_not_dict"
+      ],
+      "metrics": {
+        "total_sections": 10,
+        "expanded_sections": 7,
+        "collapsible_sections": 3,
+        "pinned_elements": 2,
+        "hero_height_px": 300,
+        "hero_reduction_percent": 40.0,
+        "scroll_reduction_percent": 30.0,
+        "hierarchy_clarity_score": 0.9,
+        "mis_operation_risk": 0.2,
+        "mis_operation_risk_reduction": 0.8,
+        "edge_case_handling_score": 1.0,
+        "safety_features": {
+          "xss_sanitization": true,
+          "input_validation": true,
+          "safe_fallbacks": true,
+          "confirmation_prompts": true
+        }
+      },
+      "html_output": "E:\\acv_data\\bug_bash\\2025_11_21\\case_2\\sonnet\\v-kaelincai_25_11_21_case2\\Project_B_EnhancedCourseUI\\tests\\..\\results\\scenario_03_long_scroll_flow_enhanced_layout.html",
+      "timestamp": "2025-11-21T15:34:43.774383"
+    },
+    {
+      "scenario_id": "scenario_04_complex_nesting",
+      "scenario_name": "Deeply Nested Layout Tree",
+      "status": "success",
+      "passed": true,
+      "validations": [
+        {
+          "check": "info_card_pinned",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "sections_collapsible",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "attachment_preview_non_blocking",
+          "expected": "side_panel",
+          "actual": "side_panel",
+          "passed": true
+        },
+        {
+          "check": "public_internal_separated",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "enrollment_confirmation",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "mobile_optimized",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "improvements": [
+        "hero_reduced_33%",
+        "3_collapsible_sections",
+        "2_pinned_elements",
+        "scroll_reduced_30%",
+        "hierarchy_clarity_improved",
+        "mis_operation_risk_reduced_80%",
+        "robust_edge_case_handling",
+        "content_separation",
+        "confirmation_prompts"
+      ],
+      "warnings": [],
+      "errors": [],
+      "edge_case_flags": [
+        "price_invalid",
+        "tags_not_array",
+        "xss_attempt_blocked",
+        "lessons_not_array",
+        "review_rating_invalid",
+        "attachment_name_missing",
+        "attachment_not_dict"
+      ],
+      "metrics": {
+        "total_sections": 10,
+        "expanded_sections": 7,
+        "collapsible_sections": 3,
+        "pinned_elements": 2,
+        "hero_height_px": 300,
+        "hero_reduction_percent": 33.3,
+        "scroll_reduction_percent": 30.0,
+        "hierarchy_clarity_score": 0.9,
+        "mis_operation_risk": 0.2,
+        "mis_operation_risk_reduction": 0.8,
+        "edge_case_handling_score": 1.0,
+        "safety_features": {
+          "xss_sanitization": true,
+          "input_validation": true,
+          "safe_fallbacks": true,
+          "confirmation_prompts": true
+        }
+      },
+      "html_output": "E:\\acv_data\\bug_bash\\2025_11_21\\case_2\\sonnet\\v-kaelincai_25_11_21_case2\\Project_B_EnhancedCourseUI\\tests\\..\\results\\scenario_04_complex_nesting_enhanced_layout.html",
+      "timestamp": "2025-11-21T15:34:43.775391"
+    },
+    {
+      "scenario_id": "scenario_05_malformed_input",
+      "scenario_name": "Malformed and Edge Case Handling",
+      "status": "success",
+      "passed": true,
+      "validations": [
+        {
+          "check": "info_card_pinned",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "sections_collapsible",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "attachment_preview_non_blocking",
+          "expected": "side_panel",
+          "actual": "side_panel",
+          "passed": true
+        },
+        {
+          "check": "public_internal_separated",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "enrollment_confirmation",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "mobile_optimized",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        }
+      ],
+      "improvements": [
+        "2_collapsible_sections",
+        "2_pinned_elements",
+        "scroll_reduced_33%",
+        "hierarchy_clarity_improved",
+        "mis_operation_risk_reduced_80%",
+        "content_separation",
+        "confirmation_prompts"
+      ],
+      "warnings": [],
+      "errors": [],
+      "edge_case_flags": [
+        "price_invalid",
+        "tags_not_array",
+        "xss_attempt_blocked",
+        "lessons_not_array",
+        "review_rating_invalid",
+        "attachment_name_missing",
+        "attachment_not_dict"
+      ],
+      "metrics": {
+        "total_sections": 6,
+        "expanded_sections": 4,
+        "collapsible_sections": 2,
+        "pinned_elements": 2,
+        "hero_height_px": 300,
+        "hero_reduction_percent": 0.0,
+        "scroll_reduction_percent": 33.3,
+        "hierarchy_clarity_score": 0.75,
+        "mis_operation_risk": 0.2,
+        "mis_operation_risk_reduction": 0.8,
+        "edge_case_handling_score": 0.3,
+        "safety_features": {
+          "xss_sanitization": true,
+          "input_validation": true,
+          "safe_fallbacks": true,
+          "confirmation_prompts": true
+        }
+      },
+      "html_output": "E:\\acv_data\\bug_bash\\2025_11_21\\case_2\\sonnet\\v-kaelincai_25_11_21_case2\\Project_B_EnhancedCourseUI\\tests\\..\\results\\scenario_05_malformed_input_enhanced_layout.html",
+      "timestamp": "2025-11-21T15:34:43.775391"
+    }
+  ],
+  "summary_metrics": {
+    "total_scenarios": 5,
+    "passed": 5,
+    "failed": 0,
+    "pass_rate": 1.0,
+    "avg_hierarchy_clarity_score": 0.87,
+    "avg_mis_operation_risk": 0.2,
+    "avg_scroll_reduction_percent": 27.5,
+    "avg_edge_case_handling_score": 0.86,
+    "total_edge_cases_handled": 35,
+    "collapsible_sections_avg": 2.4,
+    "pinned_elements_avg": 2.0
+  },
+  "improvements_summary": {
+    "total_improvements": 43,
+    "unique_improvement_types": 14,
+    "improvement_breakdown": {
+      "hero_reduced_40%": 3,
+      "3_collapsible_sections": 3,
+      "2_pinned_elements": 5,
+      "scroll_reduced_30%": 3,
+      "hierarchy_clarity_improved": 5,
+      "mis_operation_risk_reduced_80%": 5,
+      "robust_edge_case_handling": 4,
+      "content_separation": 5,
+      "confirmation_prompts": 5,
+      "1_collapsible_sections": 1,
+      "scroll_reduced_14%": 1,
+      "hero_reduced_33%": 1,
+      "2_collapsible_sections": 1,
+      "scroll_reduced_33%": 1
+    },
+    "most_common_improvements": [
+      [
+        "2_pinned_elements",
+        5
+      ],
+      [
+        "hierarchy_clarity_improved",
+        5
+      ],
+      [
+        "mis_operation_risk_reduced_80%",
+        5
+      ],
+      [
+        "content_separation",
+        5
+      ],
+      [
+        "confirmation_prompts",
+        5
+      ]
+    ]
+  }
+}

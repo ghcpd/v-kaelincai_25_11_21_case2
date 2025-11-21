@@ -1,0 +1,122 @@
+BASELINE COURSE UI - TEST LOG
+================================================================================
+
+Scenario: Normal Course Detail Page
+  ID: scenario_01_normal_flow
+  Status: success
+  Passed: True
+  Warnings: 4
+  Errors: 0
+  Metrics: {
+    "total_sections": 9,
+    "expanded_sections": 9,
+    "collapsible_sections": 0,
+    "pinned_elements": 0,
+    "hero_height_px": 500,
+    "scroll_optimization_score": 0.0,
+    "hierarchy_clarity_score": 0.3,
+    "mis_operation_risk": 1.0,
+    "edge_case_handling_score": 0.2
+}
+  HTML: E:\acv_data\bug_bash\2025_11_21\case_2\sonnet\v-kaelincai_25_11_21_case2\Project_A_BaselineCourseUI\tests\..\results\scenario_01_normal_flow_baseline_layout.html
+
+--------------------------------------------------------------------------------
+
+Scenario: Mis-operation Prevention Test
+  ID: scenario_02_mis_operation_flow
+  Status: success
+  Passed: True
+  Warnings: 4
+  Errors: 0
+  Metrics: {
+    "total_sections": 9,
+    "expanded_sections": 9,
+    "collapsible_sections": 0,
+    "pinned_elements": 0,
+    "hero_height_px": 500,
+    "scroll_optimization_score": 0.0,
+    "hierarchy_clarity_score": 0.3,
+    "mis_operation_risk": 1.0,
+    "edge_case_handling_score": 0.2
+}
+  HTML: E:\acv_data\bug_bash\2025_11_21\case_2\sonnet\v-kaelincai_25_11_21_case2\Project_A_BaselineCourseUI\tests\..\results\scenario_02_mis_operation_flow_baseline_layout.html
+
+--------------------------------------------------------------------------------
+
+Scenario: Overloaded Content Test
+  ID: scenario_03_long_scroll_flow
+  Status: success
+  Passed: True
+  Warnings: 4
+  Errors: 0
+  Metrics: {
+    "total_sections": 9,
+    "expanded_sections": 9,
+    "collapsible_sections": 0,
+    "pinned_elements": 0,
+    "hero_height_px": 500,
+    "scroll_optimization_score": 0.0,
+    "hierarchy_clarity_score": 0.3,
+    "mis_operation_risk": 1.0,
+    "edge_case_handling_score": 0.2
+}
+  HTML: E:\acv_data\bug_bash\2025_11_21\case_2\sonnet\v-kaelincai_25_11_21_case2\Project_A_BaselineCourseUI\tests\..\results\scenario_03_long_scroll_flow_baseline_layout.html
+
+--------------------------------------------------------------------------------
+
+Scenario: Deeply Nested Layout Tree
+  ID: scenario_04_complex_nesting
+  Status: success
+  Passed: True
+  Warnings: 4
+  Errors: 0
+  Metrics: {
+    "total_sections": 9,
+    "expanded_sections": 9,
+    "collapsible_sections": 0,
+    "pinned_elements": 0,
+    "hero_height_px": 500,
+    "scroll_optimization_score": 0.0,
+    "hierarchy_clarity_score": 0.3,
+    "mis_operation_risk": 1.0,
+    "edge_case_handling_score": 0.2
+}
+  HTML: E:\acv_data\bug_bash\2025_11_21\case_2\sonnet\v-kaelincai_25_11_21_case2\Project_A_BaselineCourseUI\tests\..\results\scenario_04_complex_nesting_baseline_layout.html
+
+--------------------------------------------------------------------------------
+
+Scenario: Malformed and Edge Case Handling
+  ID: scenario_05_malformed_input
+  Status: success
+  Passed: True
+  Warnings: 4
+  Errors: 0
+  Metrics: {
+    "total_sections": 9,
+    "expanded_sections": 9,
+    "collapsible_sections": 0,
+    "pinned_elements": 0,
+    "hero_height_px": 500,
+    "scroll_optimization_score": 0.0,
+    "hierarchy_clarity_score": 0.3,
+    "mis_operation_risk": 1.0,
+    "edge_case_handling_score": 0.2
+}
+  HTML: E:\acv_data\bug_bash\2025_11_21\case_2\sonnet\v-kaelincai_25_11_21_case2\Project_A_BaselineCourseUI\tests\..\results\scenario_05_malformed_input_baseline_layout.html
+
+--------------------------------------------------------------------------------
+
+
+SUMMARY METRICS:
+{
+  "total_scenarios": 5,
+  "passed": 5,
+  "failed": 0,
+  "pass_rate": 1.0,
+  "avg_hierarchy_clarity_score": 0.3,
+  "avg_mis_operation_risk": 1.0,
+  "edge_case_failures": 0,
+  "collapsible_sections_implemented": 0,
+  "pinned_elements_implemented": 0,
+  "confirmation_prompts_implemented": 0
+}

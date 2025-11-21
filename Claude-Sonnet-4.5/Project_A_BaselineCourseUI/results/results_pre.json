@@ -1,0 +1,311 @@
+{
+  "project": "Baseline Course UI",
+  "timestamp": "2025-11-21T15:34:40.169514",
+  "total_scenarios": 5,
+  "passed": 5,
+  "failed": 0,
+  "results": [
+    {
+      "scenario_id": "scenario_01_normal_flow",
+      "scenario_name": "Normal Course Detail Page",
+      "status": "success",
+      "passed": true,
+      "validations": [
+        {
+          "check": "info_card_pinned",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "check": "sections_collapsible",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "check": "attachment_preview_blocking",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "public_internal_separated",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "check": "enrollment_confirmation",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        }
+      ],
+      "warnings": [
+        "Author notes exposed publicly",
+        "Author notes exposed publicly",
+        "Author notes exposed publicly",
+        "Author notes exposed publicly"
+      ],
+      "errors": [],
+      "metrics": {
+        "total_sections": 9,
+        "expanded_sections": 9,
+        "collapsible_sections": 0,
+        "pinned_elements": 0,
+        "hero_height_px": 500,
+        "scroll_optimization_score": 0.0,
+        "hierarchy_clarity_score": 0.3,
+        "mis_operation_risk": 1.0,
+        "edge_case_handling_score": 0.2
+      },
+      "html_output": "E:\\acv_data\\bug_bash\\2025_11_21\\case_2\\sonnet\\v-kaelincai_25_11_21_case2\\Project_A_BaselineCourseUI\\tests\\..\\results\\scenario_01_normal_flow_baseline_layout.html",
+      "timestamp": "2025-11-21T15:34:40.166519"
+    },
+    {
+      "scenario_id": "scenario_02_mis_operation_flow",
+      "scenario_name": "Mis-operation Prevention Test",
+      "status": "success",
+      "passed": true,
+      "validations": [
+        {
+          "check": "info_card_pinned",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "check": "sections_collapsible",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "check": "attachment_preview_blocking",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "public_internal_separated",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "check": "enrollment_confirmation",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        }
+      ],
+      "warnings": [
+        "Author notes exposed publicly",
+        "Author notes exposed publicly",
+        "Author notes exposed publicly",
+        "Author notes exposed publicly"
+      ],
+      "errors": [],
+      "metrics": {
+        "total_sections": 9,
+        "expanded_sections": 9,
+        "collapsible_sections": 0,
+        "pinned_elements": 0,
+        "hero_height_px": 500,
+        "scroll_optimization_score": 0.0,
+        "hierarchy_clarity_score": 0.3,
+        "mis_operation_risk": 1.0,
+        "edge_case_handling_score": 0.2
+      },
+      "html_output": "E:\\acv_data\\bug_bash\\2025_11_21\\case_2\\sonnet\\v-kaelincai_25_11_21_case2\\Project_A_BaselineCourseUI\\tests\\..\\results\\scenario_02_mis_operation_flow_baseline_layout.html",
+      "timestamp": "2025-11-21T15:34:40.167514"
+    },
+    {
+      "scenario_id": "scenario_03_long_scroll_flow",
+      "scenario_name": "Overloaded Content Test",
+      "status": "success",
+      "passed": true,
+      "validations": [
+        {
+          "check": "info_card_pinned",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "check": "sections_collapsible",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "check": "attachment_preview_blocking",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "public_internal_separated",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "check": "enrollment_confirmation",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        }
+      ],
+      "warnings": [
+        "Author notes exposed publicly",
+        "Author notes exposed publicly",
+        "Author notes exposed publicly",
+        "Author notes exposed publicly"
+      ],
+      "errors": [],
+      "metrics": {
+        "total_sections": 9,
+        "expanded_sections": 9,
+        "collapsible_sections": 0,
+        "pinned_elements": 0,
+        "hero_height_px": 500,
+        "scroll_optimization_score": 0.0,
+        "hierarchy_clarity_score": 0.3,
+        "mis_operation_risk": 1.0,
+        "edge_case_handling_score": 0.2
+      },
+      "html_output": "E:\\acv_data\\bug_bash\\2025_11_21\\case_2\\sonnet\\v-kaelincai_25_11_21_case2\\Project_A_BaselineCourseUI\\tests\\..\\results\\scenario_03_long_scroll_flow_baseline_layout.html",
+      "timestamp": "2025-11-21T15:34:40.167514"
+    },
+    {
+      "scenario_id": "scenario_04_complex_nesting",
+      "scenario_name": "Deeply Nested Layout Tree",
+      "status": "success",
+      "passed": true,
+      "validations": [
+        {
+          "check": "info_card_pinned",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "check": "sections_collapsible",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "check": "attachment_preview_blocking",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "public_internal_separated",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "check": "enrollment_confirmation",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        }
+      ],
+      "warnings": [
+        "Author notes exposed publicly",
+        "Author notes exposed publicly",
+        "Author notes exposed publicly",
+        "Author notes exposed publicly"
+      ],
+      "errors": [],
+      "metrics": {
+        "total_sections": 9,
+        "expanded_sections": 9,
+        "collapsible_sections": 0,
+        "pinned_elements": 0,
+        "hero_height_px": 500,
+        "scroll_optimization_score": 0.0,
+        "hierarchy_clarity_score": 0.3,
+        "mis_operation_risk": 1.0,
+        "edge_case_handling_score": 0.2
+      },
+      "html_output": "E:\\acv_data\\bug_bash\\2025_11_21\\case_2\\sonnet\\v-kaelincai_25_11_21_case2\\Project_A_BaselineCourseUI\\tests\\..\\results\\scenario_04_complex_nesting_baseline_layout.html",
+      "timestamp": "2025-11-21T15:34:40.168514"
+    },
+    {
+      "scenario_id": "scenario_05_malformed_input",
+      "scenario_name": "Malformed and Edge Case Handling",
+      "status": "success",
+      "passed": true,
+      "validations": [
+        {
+          "check": "info_card_pinned",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "check": "sections_collapsible",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "check": "attachment_preview_blocking",
+          "expected": true,
+          "actual": true,
+          "passed": true
+        },
+        {
+          "check": "public_internal_separated",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        },
+        {
+          "check": "enrollment_confirmation",
+          "expected": false,
+          "actual": false,
+          "passed": true
+        }
+      ],
+      "warnings": [
+        "Author notes exposed publicly",
+        "Author notes exposed publicly",
+        "Author notes exposed publicly",
+        "Author notes exposed publicly"
+      ],
+      "errors": [],
+      "metrics": {
+        "total_sections": 9,
+        "expanded_sections": 9,
+        "collapsible_sections": 0,
+        "pinned_elements": 0,
+        "hero_height_px": 500,
+        "scroll_optimization_score": 0.0,
+        "hierarchy_clarity_score": 0.3,
+        "mis_operation_risk": 1.0,
+        "edge_case_handling_score": 0.2
+      },
+      "html_output": "E:\\acv_data\\bug_bash\\2025_11_21\\case_2\\sonnet\\v-kaelincai_25_11_21_case2\\Project_A_BaselineCourseUI\\tests\\..\\results\\scenario_05_malformed_input_baseline_layout.html",
+      "timestamp": "2025-11-21T15:34:40.168514"
+    }
+  ],
+  "summary_metrics": {
+    "total_scenarios": 5,
+    "passed": 5,
+    "failed": 0,
+    "pass_rate": 1.0,
+    "avg_hierarchy_clarity_score": 0.3,
+    "avg_mis_operation_risk": 1.0,
+    "edge_case_failures": 0,
+    "collapsible_sections_implemented": 0,
+    "pinned_elements_implemented": 0,
+    "confirmation_prompts_implemented": 0
+  }
+}
