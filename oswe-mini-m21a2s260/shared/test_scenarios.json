@@ -1,0 +1,43 @@
+[
+  {
+    "id": "normal",
+    "description": "Standard course page with hero, syllabus, instructor, reviews, attachments",
+    "layout": {
+      "hero": {"title":"Intro to AI","size":"large","tags":["AI","ML"],"price":"$49","cta":"Enroll Now"},
+      "sections": [
+        {"type":"public_description","content":"Course overview..."},
+        {"type":"syllabus","content":"Week 1...","attachments":[{"name":"syllabus.pdf","type":"pdf"}]},
+        {"type":"instructor","content":"Dr. Alice"},
+        {"type":"reviews","content":[{"rating":5,"text":"Great"}]}
+      ]
+    },
+    "expected": {"status":"ok"}
+  },
+  {
+    "id": "mis_operation",
+    "description": "User attempts to double-enroll and opens attachment in full-screen",
+    "layout": {
+      "hero": {"title":"Advanced UX","size":"large","price":"$199","cta":"Purchase"},
+      "sections":[{"type":"public_description","content":"..."},{"type":"syllabus","content":"...","attachments":[{"name":"slides.ppt","type":"pptx"}]}]
+    },
+    "expected": {"status":"ok","mis_operation_protection":true}
+  },
+  {
+    "id": "long_scroll",
+    "description": "Hero is oversized and pushes content below the fold",
+    "layout": {"hero":{"title":"Long Hero","size":"xlarge","content":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},"sections":[{"type":"syllabus","content":"..."},{"type":"reviews","content":"..."}]},
+    "expected": {"status":"ok","scroll_reduction":true}
+  },
+  {
+    "id": "complex_nesting",
+    "description": "Deeply nested sections mixed with hidden internal notes",
+    "layout": {"hero":{"title":"Nested Course","size":"large"},"sections":[{"type":"group","items":[{"type":"public_description","content":"..."},{"type":"internal_note","content":"draft notes..."},{"type":"group","items":[{"type":"syllabus","content":"...","attachments":[]},{"type":"reviews","content":"..."}]}]}]},
+    "expected": {"status":"ok","grouping":true}
+  },
+  {
+    "id": "malformed",
+    "description": "Malformed layout: invalid types, unsafe HTML, missing fields",
+    "layout": {"hero":null,"sections":[{"type":"unknown","content":"<script>alert(1)</script>"}]},
+    "expected": {"status":"ok","fallbacks":true,"sanitized":true}
+  }
+]

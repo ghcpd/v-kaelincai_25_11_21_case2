@@ -1,0 +1,65 @@
+[
+  {
+    "id": "normal",
+    "status": "processed",
+    "metrics": {
+      "hierarchy_clarity": 0.9,
+      "scroll_length": 0.5
+    },
+    "ui_warnings": [],
+    "edge_case_flags": [],
+    "mis_operation_protection": true,
+    "output_html": "C:\\c\\workspace\\results\\enhanced_normal.html"
+  },
+  {
+    "id": "mis_operation",
+    "status": "processed",
+    "metrics": {
+      "hierarchy_clarity": 0.9,
+      "scroll_length": 0.5
+    },
+    "ui_warnings": [],
+    "edge_case_flags": [],
+    "mis_operation_protection": true,
+    "output_html": "C:\\c\\workspace\\results\\enhanced_mis_operation.html"
+  },
+  {
+    "id": "long_scroll",
+    "status": "processed",
+    "metrics": {
+      "hierarchy_clarity": 0.9,
+      "scroll_length": 0.5
+    },
+    "ui_warnings": [],
+    "edge_case_flags": [],
+    "mis_operation_protection": true,
+    "output_html": "C:\\c\\workspace\\results\\enhanced_long_scroll.html"
+  },
+  {
+    "id": "complex_nesting",
+    "status": "processed",
+    "metrics": {
+      "hierarchy_clarity": 0.9,
+      "scroll_length": 0.8
+    },
+    "ui_warnings": [],
+    "edge_case_flags": [],
+    "mis_operation_protection": true,
+    "output_html": "C:\\c\\workspace\\results\\enhanced_complex_nesting.html"
+  },
+  {
+    "id": "malformed",
+    "status": "processed",
+    "metrics": {
+      "hierarchy_clarity": 0.9,
+      "scroll_length": 0.8
+    },
+    "ui_warnings": [
+      "Missing hero; added defaults",
+      "Missing hero; added defaults"
+    ],
+    "edge_case_flags": [],
+    "mis_operation_protection": true,
+    "output_html": "C:\\c\\workspace\\results\\enhanced_malformed.html"
+  }
+]
