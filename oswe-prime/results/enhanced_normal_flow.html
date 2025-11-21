@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Intro to Machine Learning - Enhanced</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f6f8fa; }
+    .hero { width: 100%; padding: 20px; background: #222; color: white; }
+    .hero.medium { height: 220px; }
+    .container { display: flex; gap: 20px; padding: 20px; }
+    .main { flex: 1; }
+    .info-card { width: 300px; position: sticky; top: 20px; background: #fff; border-radius: 8px; padding: 15px; box-shadow: 0 1px 6px rgba(0,0,0,0.15); }
+    .card { background: #fff; border-radius: 8px; padding: 16px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+    .cta { padding: 12px; background: #007acc; color: white; display: inline-block; margin: 10px 0; cursor: pointer; }
+    .attachments .preview { display: none; }
+
+    /* Collapsible default state */
+    .collapsible .content { display: none; }
+    .collapsible.open .content { display: block; }
+
+    /* Mobile bottom CTA */
+    @media (max-width: 640px) {
+        .container { flex-direction: column; }
+        .info-card { position: fixed; bottom: 0; width: 100%; left: 0; right: 0; border-radius: 0; }
+        .info-card .cta { display:block; width: calc(100% - 32px); text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="hero medium">
+    <h1>Intro to Machine Learning</h1>
+    <p>Learn ML basics</p>
+  </div>
+  
+
+  <div class="container">
+    <div class="main">
+      
+      <div class="card">
+        <h2>Instructor: Jane Doe</h2>
+        <div>Experienced data scientist</div>
+      </div>
+      
+
+      
+      <div class="card collapsible" id="syllabus">
+        <h3>Syllabus <button class="toggle">Toggle</button></h3>
+        <div class="content">
+          <ul>
+            
+              <li>Week 1 - Intro</li>
+            
+              <li>Week 2 - Regression</li>
+            
+          </ul>
+        </div>
+      </div>
+      
+
+      
+
+      <div class="card attachments">
+        <h3>Attachments</h3>
+        
+          <div class="attach-item">
+            <a class="attach-link" data-url="syllabus.pdf" data-title="Syllabus PDF">Syllabus PDF (pdf)</a>
+            
+            <div class="preview" id="preview-1"></div>
+          </div>
+        
+      </div>
+
+      
+      <div class="card" id="internal_notes" style="display:none;">
+        <h3>Author Notes (Hidden)</h3>
+        <div>Draft: Add more case studies</div>
+      </div>
+      
+    </div>
+
+    <aside class="info-card">
+      <div><strong>Price</strong>: $49.99</div>
+      <div><strong>Tags</strong>: ML AI </div>
+      <div class="cta" id="cta">Enroll Now</div>
+    </aside>
+  </div>
+
+  <script>
+    // toggle collapsible
+    document.querySelectorAll('.collapsible .toggle').forEach(function(btn) {
+        btn.addEventListener('click', function(){
+            var container = btn.closest('.collapsible');
+            if (container.classList.contains('open')) container.classList.remove('open');
+            else container.classList.add('open');
+        });
+    });
+
+    // attach side/inline preview (non-blocking)
+    document.querySelectorAll('.attach-link').forEach(function(link, idx){
+        link.addEventListener('click', function(e){
+            e.preventDefault();
+            var preview = link.parentNode.querySelector('.preview');
+            preview.style.display = 'block';
+            preview.textContent = 'Preview: ' + link.getAttribute('data-title') + ' (inline)';
+        });
+    });
+
+    // CTA confirmation
+    document.getElementById('cta').addEventListener('click', function(e){
+        var confirmed = confirm('Proceed with this enrollment or purchase?');
+        if (confirmed) {
+            alert('Action confirmed: ' + this.textContent);
+        } else {
+            alert('Action cancelled');
+        }
+    });
+  </script>
+</body>
+</html>

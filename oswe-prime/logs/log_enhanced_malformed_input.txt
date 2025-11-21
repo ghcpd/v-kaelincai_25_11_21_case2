@@ -1,0 +1,13 @@
+{
+  "metrics": {
+    "hierarchy_clarity_score": 90,
+    "estimated_scroll_lines_reduction": 0,
+    "confirmation_present": false,
+    "has_pinned_info_card": true,
+    "warnings": [
+      "missing_instructor",
+      "malformed_tags_fixed"
+    ],
+    "edge_case_handling_ratio": 1.0
+  }
+}

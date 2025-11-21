@@ -1,0 +1,47 @@
+{
+  "normal_flow": {
+    "hierarchy_clarity_score": 80,
+    "estimated_scroll_lines_reduction": 0,
+    "confirmation_present": true,
+    "has_pinned_info_card": true,
+    "warnings": [],
+    "edge_case_handling_ratio": 1.0
+  },
+  "mis_operation_flow": {
+    "hierarchy_clarity_score": 80,
+    "estimated_scroll_lines_reduction": 0,
+    "confirmation_present": true,
+    "has_pinned_info_card": true,
+    "warnings": [],
+    "edge_case_handling_ratio": 1.0
+  },
+  "long_scroll_flow": {
+    "hierarchy_clarity_score": 80,
+    "estimated_scroll_lines_reduction": 500,
+    "confirmation_present": true,
+    "has_pinned_info_card": true,
+    "warnings": [],
+    "edge_case_handling_ratio": 1.0
+  },
+  "complex_nesting": {
+    "hierarchy_clarity_score": 80,
+    "estimated_scroll_lines_reduction": 0,
+    "confirmation_present": true,
+    "has_pinned_info_card": true,
+    "warnings": [
+      "unsafe_attachment"
+    ],
+    "edge_case_handling_ratio": 1.0
+  },
+  "malformed_input": {
+    "hierarchy_clarity_score": 90,
+    "estimated_scroll_lines_reduction": 0,
+    "confirmation_present": false,
+    "has_pinned_info_card": true,
+    "warnings": [
+      "malformed_tags_fixed",
+      "missing_instructor"
+    ],
+    "edge_case_handling_ratio": 1.0
+  }
+}

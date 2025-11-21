@@ -1,0 +1,5 @@
+{
+  "metrics": {
+    "error": "Baseline renderer: malformed tags"
+  }
+}

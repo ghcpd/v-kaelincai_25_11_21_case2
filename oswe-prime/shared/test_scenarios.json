@@ -1,0 +1,80 @@
+[
+  {
+    "id": "normal_flow",
+    "description": "Standard course page with hero, instructor, syllabus, reviews, and attachments",
+    "layout": {
+      "hero": {"title": "Intro to Machine Learning", "subtitle": "Learn ML basics", "image": "hero.jpg", "size": "large"},
+      "price": "$49.99",
+      "tags": ["ML", "AI"],
+      "instructor": {"name": "Jane Doe", "bio": "Experienced data scientist"},
+      "syllabus": [{"week": 1, "title": "Intro"}, {"week": 2, "title": "Regression"}],
+      "reviews": [{"user": "alice", "rating": 5, "text": "Great!"}],
+      "attachments": [{"type": "pdf", "title": "Syllabus PDF", "url": "syllabus.pdf"}],
+      "internal_notes": "Draft: Add more case studies",
+      "cta": {"action": "enroll", "label": "Enroll Now"}
+    },
+    "expectations": {"should_render": true, "warnings": []}
+  },
+  {
+    "id": "mis_operation_flow",
+    "description": "CTA enrollment missing confirmation and payment flow could mis-operate",
+    "layout": {
+      "hero": {"title": "Learn Cooking", "subtitle": "Beginner's Course", "size": "extra-large"},
+      "price": "$9.99",
+      "tags": ["Cooking"],
+      "instructor": {"name": "Chef Tony"},
+      "syllabus": [{"week": 1, "title": "Knife Skills"}],
+      "reviews": [],
+      "attachments": [],
+      "internal_notes": "Internal pricing notes",
+      "cta": {"action": "buy-now", "label": "Buy Now"}
+    },
+    "expectations": {"should_render": true, "warnings": ["possible_misoperation_cta"]}
+  },
+  {
+    "id": "long_scroll_flow",
+    "description": "Very long page with many sections leading to long scrolling",
+    "layout": {
+      "hero": {"title": "Complete DevOps", "subtitle": "Full path", "size": "large"},
+      "price": "$199",
+      "tags": ["DevOps"],
+      "instructor": {"name": "Alex"},
+      "syllabus": [],
+      "reviews": [],
+      "attachments": [],
+      "sections": [
+        {"type": "content", "title": "Intro", "long_text_size": 200},
+        {"type": "content", "title": "Deep Dives", "long_text_size": 300}
+      ],
+      "cta": {"action": "enroll", "label": "Get Started"}
+    },
+    "expectations": {"should_render": true, "warnings": ["long_scroll"]}
+  },
+  {
+    "id": "complex_nesting",
+    "description": "Nested and mixed type fields representing complex layout trees",
+    "layout": {
+      "hero": {"title": "Advanced Systems", "size": "medium"},
+      "price": "Free",
+      "tags": ["Systems", {"label": "x86"}],
+      "instructor": {"name": "Dr. Smith", "bio": "..."},
+      "content": [{"type": "group", "title": "Module 1", "children": [{"type": "group", "title": "Section 1.1", "children": [{"type": "text", "text": "Important note"}]}]}],
+      "attachments": [{"type": "script", "title": "Exploit?", "url": "malicious.js"}],
+      "cta": {"action": "enroll", "label": "Join"}
+    },
+    "expectations": {"should_render": true, "warnings": ["mixed_types", "unsafe_attachment"]}
+  },
+  {
+    "id": "malformed_input",
+    "description": "Malformed layout: invalid types and missing fields",
+    "layout": {
+      "hero": null,
+      "price": 0,
+      "tags": "not-a-list",
+      "instructor": "Just a string",
+      "syllabus": "These should be a list",
+      "cta": null
+    },
+    "expectations": {"should_render": false, "warnings": ["malformed_layout"]}
+  }
+]
