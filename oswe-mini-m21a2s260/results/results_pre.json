@@ -1,0 +1,57 @@
+[
+  {
+    "id": "normal",
+    "status": "processed",
+    "metrics": {
+      "hierarchy_clarity": 0.4,
+      "scroll_length": 1.0
+    },
+    "ui_warnings": [],
+    "edge_case_flags": [],
+    "output_html": "C:\\c\\workspace\\results\\baseline_normal.html"
+  },
+  {
+    "id": "mis_operation",
+    "status": "processed",
+    "metrics": {
+      "hierarchy_clarity": 0.4,
+      "scroll_length": 1.0
+    },
+    "ui_warnings": [],
+    "edge_case_flags": [],
+    "output_html": "C:\\c\\workspace\\results\\baseline_mis_operation.html"
+  },
+  {
+    "id": "long_scroll",
+    "status": "processed",
+    "metrics": {
+      "hierarchy_clarity": 0.4,
+      "scroll_length": 1.0
+    },
+    "ui_warnings": [],
+    "edge_case_flags": [],
+    "output_html": "C:\\c\\workspace\\results\\baseline_long_scroll.html"
+  },
+  {
+    "id": "complex_nesting",
+    "status": "processed",
+    "metrics": {
+      "hierarchy_clarity": 0.4,
+      "scroll_length": 1.0
+    },
+    "ui_warnings": [],
+    "edge_case_flags": [],
+    "output_html": "C:\\c\\workspace\\results\\baseline_complex_nesting.html"
+  },
+  {
+    "id": "malformed",
+    "status": "processed",
+    "metrics": {
+      "hierarchy_clarity": 0.7,
+      "scroll_length": 0.6
+    },
+    "ui_warnings": [],
+    "edge_case_flags": [],
+    "output_html": "C:\\c\\workspace\\results\\baseline_malformed.html"
+  }
+]
