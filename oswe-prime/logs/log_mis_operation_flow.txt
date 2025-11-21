@@ -1,0 +1,13 @@
+{
+  "metrics": {
+    "hero_size": "extra-large",
+    "has_pinned_info_card": false,
+    "collapsible_sections": false,
+    "estimated_scroll_lines": 0,
+    "cta_action": "buy-now",
+    "confirmation_present": false,
+    "warnings": [
+      "possible_misoperation_cta"
+    ]
+  }
+}

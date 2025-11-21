@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Advanced Systems - Baseline</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; }
+    .hero { width: 100%; padding: 40px; background: #333; color: white; }
+    .hero.large { height: 500px; }
+    .hero.extra-large { height: 700px; }
+    .section { padding: 20px; border-bottom: 1px solid #eee; }
+    .cta { padding: 15px; background: #007acc; color: white; display: inline-block; margin: 10px 0; }
+    .attachments a { cursor: pointer; }
+    /* Fullscreen blocking overlay for attachments - baseline behavior */
+    .attachment-overlay { display: none; position: fixed; top: 0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.85); color: white; align-items: center; justify-content:center; }
+  </style>
+</head>
+<body>
+  
+  <div class="hero medium">
+    <h1>Advanced Systems</h1>
+    <p></p>
+  </div>
+  
+
+  <div class="main">
+    <div class="section">
+      <h2>Instructor</h2>
+      <div>Dr. Smith</div>
+      <div>...</div>
+    </div>
+
+    
+
+    
+
+    <div class="section attachments">
+      <h2>Attachments</h2>
+      
+        <div><a class="attach-link" data-url="malicious.js">Exploit? (script)</a></div>
+      
+    </div>
+
+    <div class="section internal-notes">
+      <h3>Author Notes</h3>
+      <div></div>
+    </div>
+
+    <div class="section">
+      <div class="cta" id="cta">Join</div>
+    </div>
+  </div>
+
+  <div class="attachment-overlay" id="overlay">
+    <div id="overlay-content">Attachment preview (fullscreen) - baseline</div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.attach-link').forEach(function(el) {
+      el.addEventListener('click', function(e){
+        var overlay = document.getElementById('overlay');
+        overlay.style.display = 'flex';
+        var content = document.getElementById('overlay-content');
+        content.innerText = 'Preview: ' + e.target.textContent + ' (fullscreen)';
+      });
+    });
+    document.getElementById('overlay').addEventListener('click', function(){ this.style.display = 'none'; });
+  </script>
+</body>
+</html>

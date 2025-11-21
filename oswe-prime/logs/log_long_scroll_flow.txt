@@ -1,0 +1,14 @@
+{
+  "metrics": {
+    "hero_size": "large",
+    "has_pinned_info_card": false,
+    "collapsible_sections": false,
+    "estimated_scroll_lines": 500,
+    "cta_action": "enroll",
+    "confirmation_present": false,
+    "warnings": [
+      "possible_misoperation_cta",
+      "long_scroll"
+    ]
+  }
+}
