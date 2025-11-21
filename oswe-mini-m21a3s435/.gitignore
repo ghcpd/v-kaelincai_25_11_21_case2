@@ -1,0 +1,45 @@
+# OS noise
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+*.code-workspace
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.mypy_cache/
+.pytest_cache/
+.dmypy.json
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Logs and run outputs
+logs/
+results/
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Coverage and testing
+.coverage
+coverage.xml
+htmlcov/
+.pytest_cache/
+
+# Local env/config
+.env
+.env.*
+*.local
+
+# System artifacts
+nohup.out

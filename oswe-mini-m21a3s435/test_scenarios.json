@@ -1,0 +1,69 @@
+[
+  {
+    "id": "normal_flow",
+    "title": "Normal course detail",
+    "description": "Standard well-formed course page with hero, syllabus, instructor, reviews, attachments",
+    "input_layout": {
+      "hero": {"title": "Mastering AI","summary":"A deep course","large": true},
+      "sections": [
+        {"type":"description","content":"Course public description"},
+        {"type":"instructor","content":{"name":"Dr. Ada","bio":"Expert"}},
+        {"type":"syllabus","content":["Week 1","Week 2","Week 3"],"attachments":[{"name":"Syllabus.pdf","type":"pdf"}]},
+        {"type":"reviews","content":[{"user":"X","rating":5,"text":"Great"}]}
+      ],
+      "internal_notes": "Author draft: include advanced lab.",
+      "cta": {"label":"Enroll now","price":"$199"}
+    },
+    "expected": {"should_pin_info_card": true, "collapsibles": true, "non_blocking_preview": true}
+  },
+  {
+    "id": "mis_operation_flow",
+    "title": "Mis-operation prone layout",
+    "description": "Actions are duplicated and CTA placed at footer only - risk of accidental purchase",
+    "input_layout": {"hero":{"title":"Quick DevOps"},"sections":[{"type":"description","content":"..."}],"cta":{"label":"Buy","price":"$9","position":"footer"},"duplicate_actions":[{"label":"Buy","position":"inline"}]},
+    "expected": {"confirmation_prompts": true, "cta_persistent": true}
+  },
+  {
+    "id": "long_scroll_flow",
+    "title": "Overloaded long page",
+    "description": "Very long hero and many full-width sections causing long scroll",
+    "input_layout": {"hero":{"title":"Mega Course","summary":"","large": true, "image_height":2000},"sections": [{"type":"description","content":""}]},
+    "expected": {"scroll_reduction": true, "collapsibles": true}
+  },
+  {
+    "id": "complex_nesting",
+    "title": "Deeply nested mixed type layout",
+    "description": "Section nodes mixed types and deeply nested children with ambiguous boundaries",
+    "input_layout": {
+      "hero": {"title": "Nesting"},
+      "sections": [
+        {
+          "type": "group",
+          "title": "Module 1",
+          "children": [
+            {
+              "type": "syllabus",
+              "content": [
+                {
+                  "week": 1,
+                  "activities": [
+                    {"type": "text", "value": "Read"},
+                    {"type": "attachment", "value": {"name": "Lab.zip", "type": "zip"}}
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "expected": {"collapsibles": true, "attachments_previewable": true}
+  },
+  {
+    "id": "malformed_input",
+    "title": "Malformed & unsafe layout",
+    "description": "Missing types, stringified subtrees, unsafe HTML embedded",
+    "input_layout": {"hero":"<script>alert(1)</script>","sections":"not an array","internal_notes": null,"cta": {"label":"Enroll"}},
+    "expected": {"safe_fallback": true, "sanitized": true}
+  }
+]
